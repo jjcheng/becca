@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Becca's Cafe</title>
+  <meta name="description" content="Becca's Cafe is located at 308 Telok Kurau Rd, Singapore 423858, Vibes @ East Coast">
+  <meta property="og:title" content="Welcome to Becca's Cafe">
+  <meta property="og:description" content="Becca's Cafe is located at 308 Telok Kurau Rd, Singapore 423858, Vibes @ East Coast">
+  <meta property="og:image" content="assets/images/branding/logo.png">
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-mark" href="#home" aria-label="Becca's Cafe">
+        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#home" data-nav="home">Home</a>
+        <a href="#menu" data-nav="menu">Menu</a>
+        <a href="#hours" data-nav="hours">Opening Hours</a>
+        <a href="#location" data-nav="location">Location</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-shell">
+    <section id="home" class="hero hero-intro reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">Welcome to Becca's Cafe</p>
+        <h1 class="mega-title">
+          <span>COME BY</span>
+          <span>FOR</span>
+          <span class="accent">SOMETHING LOVELY</span>
+        </h1>
+        <p class="lede">Flaky bakes, pink cloud drinks, and sweet little pauses at Vibes @ East Coast.</p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="#menu">View the menu</a>
+          <a class="btn btn-outline" href="#location">Location</a>
+        </div>
+      </div>
+      <figure class="hero-image-frame">
+        <img src="assets/images/hero/cover.jpeg" alt="Becca's Cafe cover image">
+      </figure>
+    </section>
+
+    <section id="menu" class="section-stack reveal">
+      <div class="page-hero section-intro">
+        <p class="eyebrow">Menu</p>
+        <h2 class="section-display">Food, drinks, and the full printed lineup.</h2>
+        <p class="lede">All prices are subject to 9% GST. Photos are for illustration purposes only.</p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="assets/documents/menus/food_menu.pdf" target="_blank" rel="noopener">Food menu PDF</a>
+          <a class="btn btn-outline" href="assets/documents/menus/drinks_menu.pdf" target="_blank" rel="noopener">Drinks menu PDF</a>
+        </div>
+      </div>
+      <div class="menu-root" data-menu-root aria-live="polite"></div>
+    </section>
+
+    <section id="hours" class="section-stack reveal">
+      <div class="page-hero section-intro">
+        <p class="eyebrow">Opening Hours</p>
+        <h2 class="section-display">Every day from 8 AM to 6 PM.</h2>
+        <p class="lede">Easy to remember and open through the day for pastries, cloud drinks, and dessert stops.</p>
+      </div>
+      <!-- <article class="info-panel info-panel-dark section-card">
+        <p class="eyebrow eyebrow-light">Daily schedule</p>
+        <h3 class="panel-title light">Monday to Sunday</h3>
+        <p class="hours">8 AM - 6 PM</p>
+        <p>Morning pastry runs, midday coffee breaks, and late-afternoon dessert stops all fit comfortably into the same daily window.</p>
+      </article> -->
+    </section>
+
+    <section id="location" class="section-stack reveal">
+      <div class="page-hero section-intro">
+        <p class="eyebrow">Location</p>
+        <h2 class="section-display">308 Telok Kurau Rd, Singapore 423858.</h2>
+        <p class="lede">You’ll find Becca's Cafe in <strong>Vibes @ East Coast</strong>, ready for a pastry run, coffee stop, or easy dessert break.</p>
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=308+Telok+Kurau+Rd,+Singapore+423858" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+      <!-- <article class="info-panel section-card location-card">
+        <p class="eyebrow">Address</p>
+        <h3 class="panel-title">Vibes @ East Coast</h3>
+        <p>308 Telok Kurau Rd<br>Singapore 423858</p>
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=308+Telok+Kurau+Rd,+Singapore+423858" target="_blank" rel="noopener">Open in Maps</a>
+      </article> -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <p class="eyebrow" style="margin-bottom: 0;">Visit Us Now</p>
+      <p class="footer-small">308 Telok Kurau Rd, Singapore 423858 · Daily 8 AM - 6 PM</p>
+      <div class="footer-links">
+        <a href="#home">HOME</a>
+        <a href="#menu">MENU</a>
+        <a href="#hours">HOURS</a>
+        <a href="#location">LOCATION</a>
+      </div>
+      <p class="footer-small footer-instagram">
+        <a class="footer-social-link" href="https://www.instagram.com/beccas.cafe/" target="_blank" rel="noopener" aria-label="Visit Becca's Cafe on Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95Zm8.95 1.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 6.4A5.6 5.6 0 1 1 6.4 12 5.6 5.6 0 0 1 12 6.4Zm0 1.8A3.8 3.8 0 1 0 15.8 12 3.81 3.81 0 0 0 12 8.2Z"/>
+          </svg>
+          <span>@beccas.cafe</span>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/menu-data.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
