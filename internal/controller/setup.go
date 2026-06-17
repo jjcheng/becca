@@ -17,6 +17,8 @@ func RegisterControllers(router *gin.Engine, dependencies *service.Dependencies)
 }
 
 func registerCommonRoutes(router *gin.Engine) {
+	registerWWWRoutes(router)
+
 	router.GET("/health", func(context *gin.Context) {
 		responseObject := dto.NewSuccessResponse(map[string]any{
 			"version":     cfg.Default().Site.Version,
@@ -33,5 +35,13 @@ func registerCommonRoutes(router *gin.Engine) {
 	router.NoMethod(func(context *gin.Context) {
 		responseObject := dto.NewFailedResponse[any](http.StatusMethodNotAllowed, "method not allowed")
 		context.AbortWithStatusJSON(responseObject.StatusCode, responseObject)
+	})
+}
+
+func registerWWWRoutes(router *gin.Engine) {
+	router.Static("/assets", "./www/assets")
+	router.Static("/licenses", "./www/licenses")
+	router.GET("/", func(context *gin.Context) {
+		context.File("./www/index.html")
 	})
 }

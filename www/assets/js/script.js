@@ -168,7 +168,7 @@
   const chipRow = document.querySelector("[data-category-nav]");
   const groupTabs = document.querySelectorAll("[data-menu-group]");
   const hasMenuControls = Boolean(chipRow && groupTabs.length);
-  const apiBaseUrl = (window.BECCA_API_BASE_URL || "http://localhost:8080").replace(/\/$/, "");
+  const apiBaseUrl = (window.BECCA_API_BASE_URL || "").replace(/\/$/, "");
 
   if (!root) {
     return;
@@ -345,7 +345,7 @@
       renderMenu();
     } catch (error) {
       console.error("Failed to load menu data", error);
-      renderMenuStatus("Menu unavailable", "Start the Go backend on port 8080 to load menu items.");
+      renderMenuStatus("Menu unavailable", "Start the Go backend to load menu items.");
     }
   }
 
