@@ -168,13 +168,48 @@
   const chipRow = document.querySelector("[data-category-nav]");
   const groupTabs = document.querySelectorAll("[data-menu-group]");
   const hasMenuControls = Boolean(chipRow && groupTabs.length);
-  const menuGroupOrder = ["food", "drinks"].filter((key) => window.menuData && window.menuData[key]);
+  const apiBaseUrl = (window.BECCA_API_BASE_URL || "http://localhost:8080").replace(/\/$/, "");
 
-  if (!root || !window.menuData) {
+  if (!root) {
     return;
   }
 
+  let menuData = null;
+  let menuGroupOrder = [];
   let currentGroup = "food";
+
+  async function loadMenuData() {
+    const response = await fetch(`${apiBaseUrl}/api/menu`, {
+      headers: {
+        Accept: "application/json"
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Menu request failed with status ${response.status}`);
+    }
+
+    const payload = await response.json();
+    if (payload && payload.success === false) {
+      throw new Error(payload.message || "Menu request failed");
+    }
+
+    return payload && payload.data ? payload.data : payload;
+  }
+
+  function renderMenuStatus(title, message) {
+    root.innerHTML = `
+      <section class="menu-section is-visible">
+        <div class="menu-section-head">
+          <div>
+            <p class="eyebrow">Menu</p>
+            <h2>${escapeHtml(title)}</h2>
+            <p class="menu-section-summary">${escapeHtml(message)}</p>
+          </div>
+        </div>
+      </section>
+    `;
+  }
 
   function escapeHtml(value) {
     return String(value)
@@ -208,7 +243,7 @@
       return;
     }
 
-    const categories = window.menuData[currentGroup].categories;
+    const categories = menuData[currentGroup].categories;
     chipRow.innerHTML = categories.map((category) => (
       `<button class="chip" type="button" data-target="${category.id}">${escapeHtml(category.title)}</button>`
     )).join("");
@@ -270,26 +305,49 @@
   function renderMenu() {
     const groupsToRender = hasMenuControls ? [currentGroup] : menuGroupOrder;
     root.innerHTML = groupsToRender.map((groupKey) => {
-      const group = window.menuData[groupKey];
+      const group = menuData[groupKey];
       return group.categories.map((category) => renderCategory(category, group)).join("");
     }).join("");
 
     watchReveals(root);
   }
 
-  if (hasMenuControls) {
-    groupTabs.forEach((button) => {
-      button.addEventListener("click", () => {
-        const nextGroup = button.getAttribute("data-menu-group");
-        if (nextGroup && nextGroup !== currentGroup) {
-          setGroup(nextGroup);
-        }
-      });
-    });
+  async function initMenu() {
+    renderMenuStatus("Loading menu", "Fetching the latest menu from the API.");
 
-    setGroup(currentGroup);
-    return;
+    try {
+      menuData = await loadMenuData();
+      menuGroupOrder = ["food", "drinks"].filter((key) => menuData && menuData[key]);
+
+      if (!menuGroupOrder.length) {
+        renderMenuStatus("Menu unavailable", "No menu groups were returned by the API.");
+        return;
+      }
+
+      if (hasMenuControls) {
+        groupTabs.forEach((button) => {
+          button.addEventListener("click", () => {
+            const nextGroup = button.getAttribute("data-menu-group");
+            if (nextGroup && nextGroup !== currentGroup) {
+              setGroup(nextGroup);
+            }
+          });
+        });
+
+        if (!menuData[currentGroup]) {
+          currentGroup = menuGroupOrder[0];
+        }
+
+        setGroup(currentGroup);
+        return;
+      }
+
+      renderMenu();
+    } catch (error) {
+      console.error("Failed to load menu data", error);
+      renderMenuStatus("Menu unavailable", "Start the Go backend on port 8080 to load menu items.");
+    }
   }
 
-  renderMenu();
+  initMenu();
 })();
