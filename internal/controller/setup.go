@@ -41,7 +41,19 @@ func registerCommonRoutes(router *gin.Engine) {
 func registerWWWRoutes(router *gin.Engine) {
 	router.Static("/assets", "./www/assets")
 	router.Static("/licenses", "./www/licenses")
-	router.GET("/", func(context *gin.Context) {
-		context.File("./www/index.html")
-	})
+
+	servePage := func(path string, file string) {
+		router.GET(path, func(context *gin.Context) {
+			context.File(file)
+		})
+	}
+
+	servePage("/", "./www/index.html")
+	servePage("/index.html", "./www/index.html")
+	servePage("/cafe-menu", "./www/menu.html")
+	servePage("/menu.html", "./www/menu.html")
+	servePage("/order", "./www/order.html")
+	servePage("/order.html", "./www/order.html")
+	servePage("/visit-us", "./www/visit.html")
+	servePage("/visit.html", "./www/visit.html")
 }

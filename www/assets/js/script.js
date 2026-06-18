@@ -1,11 +1,21 @@
 (function () {
-  const path = window.location.pathname.split("/").pop() || "index.html";
+  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+  const fileName = path.split("/").pop() || "index.html";
+  const pageName = document.body.getAttribute("data-page") || "";
   const navLinks = Array.from(document.querySelectorAll("[data-nav]"));
   const navMap = {
+    "/": "home",
+    "/index.html": "home",
+    "/cafe-menu": "menu",
+    "/menu.html": "menu",
+    "/order": "order",
+    "/order.html": "order",
+    "/visit-us": "visit",
+    "/visit.html": "visit",
     "index.html": "home",
     "menu.html": "menu",
-    "visit.html": "location",
-    "about.html": "home"
+    "order.html": "order",
+    "visit.html": "visit"
   };
 
   function setActiveNav(navKey, currentType) {
@@ -91,7 +101,7 @@
 
     window.addEventListener("hashchange", updateActiveFromHash);
   } else {
-    setActiveNav(navMap[path] || "home", "page");
+    setActiveNav(pageName || navMap[path] || navMap[fileName] || "home", "page");
   }
 
   const toggle = document.querySelector(".menu-toggle");

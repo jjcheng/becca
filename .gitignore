@@ -1,1 +1,39 @@
 .env
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Go binaries and build artifacts
+api
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.cover
+*.coverprofile
+coverage.out
+cover.out
+profile.out
+
+# Go workspace and vendoring
+go.work
+go.work.sum
+vendor/
+
+# Logs and temp files
+*.log
+tmp/
+dist/
+build/
+bin/

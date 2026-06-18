@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Becca's Cafe | Cafe Menu</title>
+  <meta name="description" content="Browse the Becca's Cafe menu, including pastries, drinks, and printable food and drinks PDFs.">
+  <meta property="og:title" content="Becca's Cafe | Cafe Menu">
+  <meta property="og:description" content="Browse the Becca's Cafe menu, including pastries, drinks, and printable food and drinks PDFs.">
+  <meta property="og:image" content="assets/images/branding/logo.png">
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="menu">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-mark" href="/" aria-label="Becca's Cafe">
+        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="/" data-nav="home">Home</a>
+        <a href="/cafe-menu" data-nav="menu">Cafe Menu</a>
+        <a href="/order" data-nav="order">Order</a>
+        <a href="/visit-us" data-nav="visit">Visit Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-shell">
+    <section class="hero hero-menu reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">Cafe Menu</p>
+        <h1 class="mega-title">
+          <span>FOOD,</span>
+          <span>DRINKS,</span>
+          <span class="accent">AND SWEET PAUSES</span>
+        </h1>
+        <p class="lede">Browse the live menu below or open the printable sheets for the full counter-ready lineup. All prices are subject to 9% GST.</p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="assets/documents/menus/food_menu.pdf" target="_blank" rel="noopener">Food menu PDF</a>
+          <a class="btn btn-outline" href="assets/documents/menus/drinks_menu.pdf" target="_blank" rel="noopener">Drinks menu PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-stack">
+      <div class="menu-toolbar reveal">
+        <div class="group-tabs" role="tablist" aria-label="Menu groups">
+          <button class="group-tab is-active" type="button" data-menu-group="food" aria-selected="true">Food</button>
+          <button class="group-tab" type="button" data-menu-group="drinks" aria-selected="false">Drinks</button>
+        </div>
+        <div class="chip-row" data-category-nav aria-label="Jump to category"></div>
+      </div>
+
+      <div class="menu-root" data-menu-root aria-live="polite"></div>
+    </section>
+
+    <article class="info-panel reveal">
+      <p class="eyebrow">Need The Route Too?</p>
+      <h2>Pair the menu with the map.</h2>
+      <p class="lede">Use the visit page for daily hours, the exact Vibes @ East Coast address, and a quick jump into Maps before you head over.</p>
+      <a class="btn btn-primary" href="/visit-us">Visit us</a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <p class="eyebrow" style="margin-bottom: 0;">Plan Your Stop</p>
+      <p class="footer-small">308 Telok Kurau Rd, Singapore 423858 · Daily 8 AM - 6 PM</p>
+      <div class="footer-links">
+        <a href="/">HOME</a>
+        <a href="/cafe-menu">CAFE MENU</a>
+        <a href="/order">ORDER</a>
+        <a href="/visit-us">VISIT US</a>
+      </div>
+      <p class="footer-small footer-instagram">
+        <a class="footer-social-link" href="https://www.instagram.com/beccas.cafe/" target="_blank" rel="noopener" aria-label="Visit Becca's Cafe on Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95Zm8.95 1.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 6.4A5.6 5.6 0 1 1 6.4 12 5.6 5.6 0 0 1 12 6.4Zm0 1.8A3.8 3.8 0 1 0 15.8 12 3.81 3.81 0 0 0 12 8.2Z"/>
+          </svg>
+          <span>@beccas.cafe</span>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

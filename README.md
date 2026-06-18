@@ -11,6 +11,12 @@ This workspace is now served entirely from the Go backend project.
 Start the API:
 
 ```bash
+make start
+```
+
+You can still run the underlying command directly if needed:
+
+```bash
 go run ./cmd/api
 ```
 
