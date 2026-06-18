@@ -89,7 +89,7 @@
   --sand: #dcc7b8;
   --line: rgba(73, 49, 39, 0.16);
   --shadow: 0 26px 60px rgba(36, 24, 20, 0.1);
-  --container: min(1180px, calc(100vw - 32px));
+  --container: min(1320px, calc(100vw - 32px));
 }
 
 * {
@@ -140,7 +140,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 30;
-  padding: 18px 0 18px;
+  padding: 10px 0;
   background: linear-gradient(180deg, rgba(245, 239, 231, 0.92), rgba(245, 239, 231, 0.74));
   backdrop-filter: blur(18px);
 }
@@ -173,7 +173,7 @@ a {
 
 .brand-mark img {
   width: auto;
-  height: 60px;
+  height: 54px;
   filter: drop-shadow(0 8px 16px rgba(36, 24, 20, 0.12));
 }
 
@@ -222,7 +222,20 @@ a {
 }
 
 .page-shell {
-  padding: 24px 0 24px;
+  padding: 16px 0 24px;
+}
+
+.page-chip {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(240, 107, 156, 0.18);
+  color: var(--rose);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .hero,
@@ -241,7 +254,7 @@ a {
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
-  gap: clamp(24px, 4vw, 68px);
+  gap: clamp(20px, 3vw, 48px);
   align-items: center;
 }
 
@@ -266,6 +279,12 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hero-image-frame.is-contain img {
+  padding: 28px;
+  object-fit: contain;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 213, 228, 0.24));
 }
 
 .hero-menu .hero-copy {
@@ -303,6 +322,11 @@ a {
 
 .section-card {
   max-width: 860px;
+}
+
+.section-heading-center {
+  margin-bottom: 18px;
+  text-align: center;
 }
 
 .panel-title {
@@ -343,7 +367,7 @@ a {
 }
 
 .mega-title {
-  font-size: clamp(2.2rem, 7vw, 5.2rem);
+  font-size: clamp(2.2rem, 6vw, 4.7rem);
   font-weight: 700;
   letter-spacing: -0.055em;
   text-transform: uppercase;
@@ -353,6 +377,18 @@ a {
   display: block;
 }
 
+.hero-title-stacked span {
+  display: block !important;
+}
+
+.hero-title-home {
+  max-width: 8ch;
+}
+
+.hero-copy-narrow {
+  max-width: 430px;
+}
+
 .mega-title .accent,
 .section-display .accent {
   color: var(--blush);
@@ -360,7 +396,7 @@ a {
 
 .lede {
   /* max-width: 40rem; */
-  margin: 24px 0 24px 0;
+  margin: 18px 0 18px 0;
   color: var(--cocoa);
   font-size: clamp(1.02rem, 2vw, 1.2rem);
 }
@@ -369,7 +405,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 28px;
+  margin-top: 20px;
 }
 
 .button-row-center {
@@ -955,6 +991,386 @@ a {
   font-weight: 600;
 }
 
+.signature-showcase {
+  margin-bottom: clamp(28px, 5vw, 64px);
+}
+
+.signature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.signature-card,
+.order-card,
+.process-step,
+.map-card {
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background: rgba(255, 250, 246, 0.72);
+  box-shadow: var(--shadow);
+}
+
+.signature-card,
+.order-card,
+.process-step {
+  padding: 18px;
+}
+
+.signature-card {
+  text-align: center;
+}
+
+.signature-card img,
+.order-card img,
+.cafe-photo-card img {
+  width: 100%;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.signature-card img,
+.order-card img {
+  aspect-ratio: 1.1;
+  object-fit: contain;
+  padding: 16px;
+}
+
+.photo-shot {
+  padding: 0 !important;
+  object-fit: cover !important;
+}
+
+.signature-card h3,
+.order-card h3,
+.process-step h3 {
+  margin: 18px 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  line-height: 0.98;
+}
+
+.signature-card p,
+.order-card-meta,
+.order-card-note,
+.process-step p,
+.contact-note,
+.contact-subtext,
+.contact-link,
+.cafe-photo-card figcaption {
+  color: var(--cocoa);
+}
+
+.signature-card p {
+  margin: 10px 0 0;
+}
+
+.signature-heart {
+  display: inline-flex;
+  margin-top: 14px;
+  color: var(--rose);
+  font-size: 1.35rem;
+}
+
+.detail-list {
+  display: grid;
+  gap: 10px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--cocoa);
+}
+
+.detail-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(240, 107, 156, 0.24);
+  box-shadow: 0 0 0 1px rgba(210, 79, 125, 0.24);
+}
+
+.detail-list-strong li {
+  font-weight: 600;
+}
+
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: clamp(28px, 5vw, 64px);
+}
+
+.order-card-meta,
+.order-card-note,
+.process-step p,
+.contact-note,
+.cafe-photo-card figcaption {
+  margin: 12px 0 0;
+}
+
+.order-card-price,
+.process-step-count {
+  margin: 14px 0 0;
+  color: var(--rose);
+  font-family: "Cormorant Garamond", serif;
+}
+
+.order-card-price {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+}
+
+.order-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: clamp(28px, 5vw, 64px);
+}
+
+.process-step-count {
+  font-size: clamp(2.3rem, 3.8vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.order-cta-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+}
+
+.visit-overview {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  gap: 18px;
+  align-items: stretch;
+  margin-bottom: clamp(28px, 5vw, 64px);
+}
+
+.contact-list {
+  display: grid;
+  gap: 14px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-item {
+  display: grid;
+  gap: 4px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+.contact-value,
+.contact-link {
+  font-weight: 700;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+  color: var(--rose);
+  outline: none;
+}
+
+.map-card {
+  overflow: hidden;
+  min-height: 480px;
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  border: 0;
+}
+
+.map-illustration {
+  position: relative;
+  isolation: isolate;
+  background: #f3ede8;
+}
+
+.map-water,
+.map-green,
+.map-road,
+.map-pin {
+  position: absolute;
+}
+
+.map-water {
+  right: -7%;
+  bottom: -12%;
+  width: 62%;
+  height: 58%;
+  border-radius: 48% 0 0 0;
+  background: linear-gradient(135deg, #bfe4ee, #8dc8da);
+  transform: rotate(-7deg);
+}
+
+.map-green {
+  right: 20%;
+  bottom: 14%;
+  width: 56%;
+  height: 22%;
+  border-radius: 999px;
+  background: rgba(174, 205, 139, 0.72);
+  transform: rotate(-8deg);
+}
+
+.map-road {
+  z-index: 1;
+  height: 30px;
+  border: 1px solid rgba(128, 120, 114, 0.25);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 8px rgba(213, 207, 202, 0.4);
+}
+
+.map-road-main {
+  left: -8%;
+  right: -7%;
+  top: 52%;
+  transform: rotate(-7deg);
+}
+
+.map-road-secondary {
+  left: 34%;
+  top: -10%;
+  width: 30px;
+  height: 122%;
+  transform: rotate(-26deg);
+}
+
+.map-road-third {
+  left: 64%;
+  top: -8%;
+  width: 26px;
+  height: 118%;
+  transform: rotate(-18deg);
+}
+
+.map-pin {
+  z-index: 2;
+  left: 55%;
+  top: 40%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.map-pin-dot {
+  width: 26px;
+  height: 26px;
+  border: 5px solid white;
+  border-radius: 999px 999px 999px 0;
+  background: var(--rose);
+  box-shadow: 0 10px 20px rgba(36, 24, 20, 0.18);
+  transform: rotate(-45deg);
+}
+
+.map-pin-label {
+  padding: 9px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 24px rgba(36, 24, 20, 0.12);
+  color: var(--espresso);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.map-pin-label small {
+  color: var(--cocoa);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cocoa);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--espresso);
+  font: inherit;
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible {
+  border-color: rgba(210, 79, 125, 0.55);
+  outline: 2px solid rgba(240, 107, 156, 0.18);
+  outline-offset: 2px;
+}
+
+.field textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.cafe-photo-card {
+  padding: 18px;
+}
+
+.cafe-photo-card img {
+  min-height: 280px;
+}
+
 .reveal {
   opacity: 1;
   transform: none;
@@ -966,7 +1382,7 @@ a {
   transform: none;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 760px) {
   .hero,
   .editorial-split,
   .visit-layout,
@@ -1113,6 +1529,302 @@ a {
 
   .hero-image-frame {
     min-height: 280px;
+  }
+}
+
+@media (max-width: 760px) {
+  .visit-overview,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signature-grid,
+  .order-grid,
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .order-cta-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero-image-home img {
+  object-position: 72% 52%;
+}
+
+.hero-product-scene {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(360px, 42vw, 560px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 28% 42%, rgba(255, 213, 228, 0.85), transparent 13rem),
+    linear-gradient(135deg, rgba(252, 236, 230, 0.96), rgba(241, 222, 212, 0.86));
+  box-shadow: var(--shadow);
+}
+
+.hero-product-scene::before {
+  content: "";
+  position: absolute;
+  inset: auto 8% 8% 15%;
+  height: 34%;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.42);
+  transform: rotate(-3deg);
+}
+
+.hero-product-scene img {
+  position: absolute;
+  object-fit: contain;
+}
+
+.hero-scene-drink {
+  left: 14%;
+  bottom: 13%;
+  width: min(42%, 240px);
+  filter: drop-shadow(0 24px 26px rgba(36, 24, 20, 0.16));
+}
+
+.hero-scene-pastry {
+  right: 8%;
+  bottom: 11%;
+  width: min(52%, 320px);
+  filter: drop-shadow(0 22px 24px rgba(36, 24, 20, 0.16));
+}
+
+.hero-scene-logo {
+  top: 10%;
+  right: 9%;
+  width: min(34%, 220px);
+  opacity: 0.88;
+  filter: drop-shadow(0 10px 14px rgba(36, 24, 20, 0.08));
+}
+
+.signature-card {
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+.signature-card img {
+  aspect-ratio: 1.42;
+  border-radius: 12px;
+}
+
+.signature-card p {
+  display: none;
+}
+
+.signature-heart {
+  color: var(--blush);
+  font-size: 1.55rem;
+}
+
+.menu-reference {
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.menu-reference-copy {
+  max-width: 760px;
+}
+
+.menu-page-title {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.menu-sheet-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: 18px;
+  align-items: start;
+  margin-bottom: clamp(28px, 5vw, 56px);
+}
+
+.menu-sheet-panel {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(247, 239, 232, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.menu-sheet-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.menu-order-preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: clamp(28px, 5vw, 56px);
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 250, 246, 0.72);
+  box-shadow: var(--shadow);
+}
+
+.order-hero {
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  align-items: stretch;
+}
+
+.order-hero-image {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  min-height: clamp(320px, 36vw, 480px);
+  overflow: hidden;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 78% 26%, rgba(255, 213, 228, 0.74), transparent 14rem),
+    linear-gradient(135deg, rgba(252, 236, 230, 0.95), rgba(240, 209, 197, 0.86));
+  box-shadow: var(--shadow);
+}
+
+.order-hero-image img {
+  width: min(82%, 680px);
+  filter: drop-shadow(0 24px 28px rgba(36, 24, 20, 0.16));
+}
+
+.order-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+  gap: 22px;
+  margin-bottom: clamp(28px, 5vw, 56px);
+}
+
+.whole-cakes-panel h2 {
+  margin: 0 0 18px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.whole-cake-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.small-bakes-panel {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.order-card {
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+.order-card-feature img {
+  aspect-ratio: 1.55;
+}
+
+.order-card-compact {
+  display: grid;
+  grid-template-columns: 148px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+}
+
+.order-card-compact img {
+  aspect-ratio: 1.3;
+  padding: 10px;
+}
+
+.order-card-compact .btn,
+.order-card-feature .btn {
+  margin-top: 16px;
+}
+
+.process-step,
+.map-card,
+.info-panel,
+.gallery-card {
+  border-radius: 18px;
+}
+
+.visit-overview {
+  grid-template-columns: minmax(260px, 0.52fr) minmax(0, 1.48fr);
+  align-items: stretch;
+}
+
+.visit-overview .info-panel {
+  padding: clamp(20px, 3vw, 30px);
+}
+
+.visit-overview .section-display {
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+}
+
+.contact-list {
+  gap: 12px;
+}
+
+.map-card,
+.map-card iframe {
+  min-height: clamp(380px, 40vw, 520px);
+}
+
+.cafe-photo-card img {
+  min-height: 360px;
+}
+
+@media (max-width: 960px) {
+  .menu-sheet-showcase,
+  .order-board,
+  .menu-order-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .whole-cake-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-product-scene,
+  .order-hero-image {
+    min-height: 320px;
+  }
+
+  .hero-scene-logo {
+    width: min(38%, 180px);
+  }
+
+  .order-card-compact,
+  .whole-cake-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 760px) {
+  .signature-grid,
+  .order-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-card,
+  .map-card iframe {
+    min-height: 320px;
   }
 }
 

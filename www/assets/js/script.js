@@ -8,6 +8,8 @@
     "/index.html": "home",
     "/cafe-menu": "menu",
     "/menu.html": "menu",
+    "/cakes-bakes": "menu",
+    "/cakes-bakes.html": "menu",
     "/order": "order",
     "/order.html": "order",
     "/visit-us": "visit",
@@ -174,6 +176,32 @@
 
   watchReveals(document);
 
+  document.querySelectorAll("[data-mailto-form]").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const to = form.getAttribute("data-mailto-to") || "";
+      if (!to) {
+        return;
+      }
+
+      const formData = new FormData(form);
+      const name = String(formData.get("name") || "").trim();
+      const email = String(formData.get("email") || "").trim();
+      const message = String(formData.get("message") || "").trim();
+      const subject = form.getAttribute("data-mailto-subject") || "Becca's Cafe enquiry";
+      const body = [
+        name ? `Name: ${name}` : "",
+        email ? `Email: ${email}` : "",
+        "",
+        message ? "Message:" : "",
+        message || ""
+      ].filter(Boolean).join("\n");
+
+      window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  });
+
   const root = document.querySelector("[data-menu-root]");
   const chipRow = document.querySelector("[data-category-nav]");
   const groupTabs = document.querySelectorAll("[data-menu-group]");
@@ -186,7 +214,7 @@
 
   let menuData = null;
   let menuGroupOrder = [];
-  let currentGroup = "food";
+  let currentGroup = "drinks";
 
   async function loadMenuData() {
     const response = await fetch(`${apiBaseUrl}/api/menu`, {
@@ -327,7 +355,7 @@
 
     try {
       menuData = await loadMenuData();
-      menuGroupOrder = ["food", "drinks"].filter((key) => menuData && menuData[key]);
+      menuGroupOrder = ["drinks", "food"].filter((key) => menuData && menuData[key]);
 
       if (!menuGroupOrder.length) {
         renderMenuStatus("Menu unavailable", "No menu groups were returned by the API.");

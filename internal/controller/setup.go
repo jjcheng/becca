@@ -52,6 +52,8 @@ func registerWWWRoutes(router *gin.Engine) {
 	servePage("/index.html", "./www/index.html")
 	servePage("/cafe-menu", "./www/menu.html")
 	servePage("/menu.html", "./www/menu.html")
+	servePage("/cakes-bakes", "./www/menu.html")
+	servePage("/cakes-bakes.html", "./www/menu.html")
 	servePage("/order", "./www/order.html")
 	servePage("/order.html", "./www/order.html")
 	servePage("/visit-us", "./www/visit.html")
