@@ -18,14 +18,17 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand-mark" href="/" aria-label="Becca's Cafe home page">
-        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
-      </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+      <button class="menu-toggle header-icon-button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      <a class="brand-mark" href="/" aria-label="Becca's Cafe home page">
+        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
+      </a>
+      <a class="header-order-link header-icon-button" href="/order" aria-label="Order cakes and bakes">
+        <span class="bag-icon" aria-hidden="true"></span>
+      </a>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="/" data-nav="home">Home</a>
         <a href="/cafe-menu" data-nav="menu">Cafe Menu</a>
@@ -35,29 +38,22 @@
     </div>
   </header>
 
-  <main id="main-content" class="page-shell">
-    <p class="page-chip reveal">Cafe Menu Page</p>
+  <main id="main-content" class="page-shell page-shell-design menu-page">
+    <section class="menu-design-hero reveal" aria-labelledby="menu-title">
+      <p class="eyebrow">Made with love</p>
+      <h1 id="menu-title">Cafe Menu</h1>
+      <p>Handcrafted coffee, cloud drinks, savoury bites, and fresh bakes from the counter.</p>
+    </section>
 
-    <section class="menu-reference reveal">
-      <div class="menu-reference-copy">
-        <p class="eyebrow">Cafe Menu</p>
-        <h1 class="menu-page-title">Cafe Menu</h1>
-        <p class="lede">Handcrafted drinks and freshly made bites, made with love.</p>
-        <div class="button-row button-row-center">
-          <a class="btn btn-primary" href="#drinks-menu-sheet">Drinks</a>
-          <a class="btn btn-outline" href="#food-menu-sheet">Food</a>
-        </div>
+    <section class="menu-toolbar design-toolbar reveal" aria-label="Menu controls">
+      <div class="group-tabs" role="tablist" aria-label="Menu group">
+        <button class="group-tab is-active" type="button" role="tab" aria-selected="true" data-menu-group="drinks">Drinks</button>
+        <button class="group-tab" type="button" role="tab" aria-selected="false" data-menu-group="food">Food</button>
       </div>
+      <div class="chip-row" data-category-nav aria-label="Menu categories"></div>
     </section>
 
-    <section class="menu-sheet-showcase reveal" aria-label="Becca's Cafe menu sheets">
-      <figure id="drinks-menu-sheet" class="menu-sheet-panel menu-sheet-panel-large">
-        <img src="assets/images/menu/drinks-menu-sheet.png" alt="Becca's Cafe drinks menu sheet">
-      </figure>
-      <figure id="food-menu-sheet" class="menu-sheet-panel">
-        <img src="assets/images/menu/food-menu-sheet.png" alt="Becca's Cafe food menu sheet">
-      </figure>
-    </section>
+    <div class="menu-root design-menu-root" data-menu-root></div>
 
     <section class="menu-order-preview reveal">
       <div>
@@ -65,22 +61,19 @@
         <h2 class="panel-title">Whole cakes, brownies, crookies, and cookies.</h2>
         <p class="lede">Freshly baked with 2 - 3 days advance notice required. Browse the order catalogue and send through your preferred date when you are ready.</p>
       </div>
-      <div class="button-row">
-        <a class="btn btn-primary" href="/order">Go to Order</a>
-      </div>
+      <a class="btn btn-primary" href="/order">Go to Order</a>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="footer-main">
-      <p class="eyebrow" style="margin-bottom: 0;">Plan Your Stop</p>
+      <p class="footer-eyebrow">Plan Your Stop</p>
       <p class="footer-small">Vibes @ East Coast, 1 East Coast Road #01-07, Singapore 428750 · Daily 8:00 AM - 6:00 PM</p>
       <div class="footer-links">
-        <a href="/">HOME</a>
-        <a href="/cafe-menu">CAFE MENU</a>
-        <a href="/order">ORDER</a>
-        <a href="/visit-us">VISIT US</a>
+        <a href="/">Home</a>
+        <a href="/cafe-menu">Cafe Menu</a>
+        <a href="/order">Order</a>
+        <a href="/visit-us">Visit Us</a>
       </div>
       <p class="footer-small footer-instagram">
         <a class="footer-social-link" href="https://www.instagram.com/beccascafe.sg/" target="_blank" rel="noopener" aria-label="Visit Becca's Cafe on Instagram">

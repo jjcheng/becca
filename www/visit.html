@@ -18,14 +18,17 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand-mark" href="/" aria-label="Becca's Cafe home page">
-        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
-      </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+      <button class="menu-toggle header-icon-button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      <a class="brand-mark" href="/" aria-label="Becca's Cafe home page">
+        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
+      </a>
+      <a class="header-order-link header-icon-button" href="/order" aria-label="Order cakes and bakes">
+        <span class="bag-icon" aria-hidden="true"></span>
+      </a>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="/" data-nav="home">Home</a>
         <a href="/cafe-menu" data-nav="menu">Cafe Menu</a>
@@ -35,13 +38,18 @@
     </div>
   </header>
 
-  <main id="main-content" class="page-shell">
-    <p class="page-chip reveal">Visit Us Page</p>
+  <main id="main-content" class="page-shell page-shell-design visit-page">
+    <section class="visit-hero reveal" aria-labelledby="visit-title">
+      <img src="assets/images/hero/cover.jpeg" alt="Cafe setting at Becca's Cafe">
+      <div>
+        <p class="eyebrow">Visit Us</p>
+        <h1 id="visit-title">Find your pink corner.</h1>
+        <p>Stop by for coffee, matcha, pastries, dine-in breaks, and takeaway treats at Vibes @ East Coast.</p>
+      </div>
+    </section>
 
     <section class="visit-overview reveal">
-      <article class="info-panel">
-        <p class="eyebrow">Visit Us</p>
-        <h1 class="section-display">Visit Us</h1>
+      <article class="info-panel visit-info-panel">
         <ul class="contact-list">
           <li class="contact-item">
             <span class="contact-label">Address</span>
@@ -105,22 +113,29 @@
         <button class="btn btn-primary" type="submit">Send Message</button>
       </form>
 
-      <figure class="gallery-card cafe-photo-card">
-        <img class="photo-shot" src="assets/images/hero/cover.jpeg" alt="Cafe table and drink scene at Becca's Cafe">
-        <figcaption>A soft corner for coffee, matcha, pastries, dine-in breaks, and takeaway stops by the coast.</figcaption>
-      </figure>
+      <div class="visit-gallery" aria-label="Cafe gallery preview">
+        <img src="assets/images/menu/cream-cloud-latte.png" alt="Cream Cloud Latte">
+        <img src="assets/images/menu/kouign-amann.png" alt="Kouign Amann">
+        <img src="assets/images/menu/strawberry-cloud-matcha.png" alt="Strawberry Cloud Matcha">
+        <img src="assets/images/menu/cookies.png" alt="Cookies">
+      </div>
+    </section>
+
+    <section class="thanks-block reveal">
+      <p class="script-mark">See you soon</p>
+      <h2>Come by for something soft, sweet, and freshly made.</h2>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-main">
-      <p class="eyebrow" style="margin-bottom: 0;">Plan Your Stop</p>
+      <p class="footer-eyebrow">Plan Your Stop</p>
       <p class="footer-small">Vibes @ East Coast, 1 East Coast Road #01-07, Singapore 428750 · Daily 8:00 AM - 6:00 PM</p>
       <div class="footer-links">
-        <a href="/">HOME</a>
-        <a href="/cafe-menu">CAFE MENU</a>
-        <a href="/order">ORDER</a>
-        <a href="/visit-us">VISIT US</a>
+        <a href="/">Home</a>
+        <a href="/cafe-menu">Cafe Menu</a>
+        <a href="/order">Order</a>
+        <a href="/visit-us">Visit Us</a>
       </div>
       <p class="footer-small footer-instagram">
         <a class="footer-social-link" href="https://www.instagram.com/beccascafe.sg/" target="_blank" rel="noopener" aria-label="Visit Becca's Cafe on Instagram">

@@ -18,14 +18,17 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand-mark" href="/" aria-label="Becca's Cafe home page">
-        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
-      </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+      <button class="menu-toggle header-icon-button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      <a class="brand-mark" href="/" aria-label="Becca's Cafe home page">
+        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
+      </a>
+      <a class="header-order-link header-icon-button" href="/order" aria-label="Order cakes and bakes">
+        <span class="bag-icon" aria-hidden="true"></span>
+      </a>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="/" data-nav="home">Home</a>
         <a href="/cafe-menu" data-nav="menu">Cafe Menu</a>
@@ -35,56 +38,57 @@
     </div>
   </header>
 
-  <main id="main-content" class="page-shell">
-    <p class="page-chip reveal">Order Page</p>
-
-    <section class="hero order-hero reveal">
-      <div class="hero-copy hero-copy-narrow">
+  <main id="main-content" class="page-shell page-shell-design order-page">
+    <section class="order-design-hero reveal" aria-labelledby="order-title">
+      <div>
         <p class="eyebrow">Order</p>
-        <h1 class="mega-title hero-title-stacked">
-          <span>Order</span>
-          <span>Cakes &amp;</span>
-          <span class="accent">Bakes</span>
-        </h1>
-        <p class="lede">Freshly baked. Made to order. 2 - 3 days advance notice required.</p>
+        <h1 id="order-title">Cakes &amp; Bakes</h1>
+        <p>Freshly baked, made to order, and ready for birthdays, dinners, or a very good afternoon.</p>
         <ul class="detail-list detail-list-strong">
-          <li>Premium ingredients</li>
-          <li>Made with love</li>
-          <li>Perfect for any occasion</li>
+          <li>2 - 3 days advance notice required</li>
+          <li>Collection at East Coast</li>
+          <li>Delivery available on request</li>
         </ul>
         <div class="button-row">
           <a class="btn btn-primary" href="mailto:beccascafe.sg@gmail.com?subject=Cakes%20%26%20Bakes%20Order%20Enquiry">Place an order</a>
           <a class="btn btn-outline" href="https://www.instagram.com/beccascafe.sg/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
-      <figure class="order-hero-image">
+      <figure>
         <img src="assets/images/menu/basque-cheesecake.png" alt="Basque cheesecake from Becca's Cafe">
       </figure>
     </section>
 
-    <section class="order-board reveal">
+    <section class="order-board reveal" aria-labelledby="whole-cakes-title">
       <div class="whole-cakes-panel">
-        <h2>Whole Cakes</h2>
+        <div class="design-section-heading compact-heading">
+          <p class="eyebrow">Whole Cakes</p>
+          <h2 id="whole-cakes-title">Made for sharing.</h2>
+        </div>
         <div class="whole-cake-grid">
-          <article class="order-card order-card-feature">
+          <article class="order-card order-card-feature design-product-card">
             <img src="assets/images/menu/basque-cheesecake.png" alt="Basque Cheesecake whole cake from Becca's Cafe">
-            <h3>Basque Cheesecake</h3>
-            <p class="order-card-meta">7 inch | serves 6 - 8 pax</p>
-            <p class="order-card-price">$78.00</p>
-            <a class="btn btn-primary" href="mailto:beccascafe.sg@gmail.com?subject=Order%20Enquiry%20-%20Basque%20Cheesecake">Order now</a>
+            <div>
+              <h3>Basque Cheesecake</h3>
+              <p class="order-card-meta">7 inch | serves 6 - 8 pax</p>
+              <p class="order-card-price">$78.00</p>
+              <a class="btn btn-primary" href="mailto:beccascafe.sg@gmail.com?subject=Order%20Enquiry%20-%20Basque%20Cheesecake">Order now</a>
+            </div>
           </article>
-          <article class="order-card order-card-feature">
-            <img src="assets/images/menu/basque-cheesecake.png" alt="Matcha Basque Cheesecake whole cake from Becca's Cafe">
-            <h3>Matcha Basque Cheesecake</h3>
-            <p class="order-card-meta">7 inch | serves 6 - 8 pax</p>
-            <p class="order-card-price">$88.00</p>
-            <a class="btn btn-primary" href="mailto:beccascafe.sg@gmail.com?subject=Order%20Enquiry%20-%20Matcha%20Basque%20Cheesecake">Order now</a>
+          <article class="order-card order-card-feature design-product-card">
+            <img src="assets/images/menu/oreo-cheesecake.png" alt="Oreo Cheesecake whole cake from Becca's Cafe">
+            <div>
+              <h3>Oreo Cheesecake</h3>
+              <p class="order-card-meta">7 inch | serves 6 - 8 pax</p>
+              <p class="order-card-price">$88.00</p>
+              <a class="btn btn-primary" href="mailto:beccascafe.sg@gmail.com?subject=Order%20Enquiry%20-%20Oreo%20Cheesecake">Order now</a>
+            </div>
           </article>
         </div>
       </div>
 
-      <div class="small-bakes-panel">
-        <article class="order-card order-card-compact">
+      <div class="small-bakes-panel" aria-label="Small bakes">
+        <article class="order-card order-card-compact design-product-card">
           <img src="assets/images/menu/brownie.png" alt="Blackout brownies from Becca's Cafe">
           <div>
             <h3>Blackout Brownies</h3>
@@ -94,7 +98,7 @@
             <a class="btn btn-primary" href="mailto:beccascafe.sg@gmail.com?subject=Order%20Enquiry%20-%20Blackout%20Brownies">Order now</a>
           </div>
         </article>
-        <article class="order-card order-card-compact">
+        <article class="order-card order-card-compact design-product-card">
           <img src="assets/images/menu/crookie.png" alt="Crookies from Becca's Cafe">
           <div>
             <h3>Crookies</h3>
@@ -104,62 +108,58 @@
             <a class="btn btn-primary" href="mailto:beccascafe.sg@gmail.com?subject=Order%20Enquiry%20-%20Crookies">Order now</a>
           </div>
         </article>
-        <article class="order-card order-card-compact">
+        <article class="order-card order-card-compact design-product-card">
           <img src="assets/images/menu/cookies.png" alt="Biscoff cookies from Becca's Cafe">
           <div>
             <h3>Biscoff Cookies</h3>
             <p class="order-card-meta">Box of 4</p>
             <p class="order-card-price">$24.00</p>
+            <p class="order-card-note">Ask for the week's flavours.</p>
             <a class="btn btn-primary" href="mailto:beccascafe.sg@gmail.com?subject=Order%20Enquiry%20-%20Biscoff%20Cookies">Order now</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="process-grid reveal">
+    <section class="process-grid reveal" aria-label="How to order">
       <article class="process-step">
         <p class="process-step-count">1</p>
-        <h3>Select your item</h3>
-        <p>Choose the cake or bake you want and note the size or box option.</p>
+        <h3>Choose your item</h3>
+        <p>Select your cake or bake and preferred collection date.</p>
       </article>
       <article class="process-step">
         <p class="process-step-count">2</p>
-        <h3>Submit your order</h3>
-        <p>Email or message through Instagram with your request and preferred date.</p>
+        <h3>Send the request</h3>
+        <p>Email or message Instagram with the item and timing.</p>
       </article>
       <article class="process-step">
         <p class="process-step-count">3</p>
         <h3>We confirm</h3>
-        <p>We will confirm availability, timing, and any order details with you directly.</p>
+        <p>We will reply with availability, payment, and pickup details.</p>
       </article>
       <article class="process-step">
         <p class="process-step-count">4</p>
-        <h3>Collection or delivery</h3>
-        <p>Collection is easiest, and delivery can be arranged on request.</p>
+        <h3>Enjoy</h3>
+        <p>Collect from the cafe or arrange delivery where possible.</p>
       </article>
     </section>
 
-    <article class="info-panel info-panel-dark order-cta-panel reveal">
-      <div>
-        <p class="eyebrow eyebrow-light">Ordering Notes</p>
-        <h2 class="light">Need a custom timing check?</h2>
-        <p>Send the date you need, the item you want, and whether you prefer collection or delivery.</p>
-      </div>
-      <div class="button-row">
-        <a class="btn btn-light" href="mailto:beccascafe.sg@gmail.com?subject=Cakes%20%26%20Bakes%20Order%20Request">Email order request</a>
-      </div>
+    <article class="order-final-cta reveal">
+      <p class="eyebrow">Ready when you are</p>
+      <h2>Tell us what you are celebrating.</h2>
+      <a class="btn btn-light" href="mailto:beccascafe.sg@gmail.com?subject=Cakes%20%26%20Bakes%20Order%20Request">Email order request</a>
     </article>
   </main>
 
   <footer class="site-footer">
     <div class="footer-main">
-      <p class="eyebrow" style="margin-bottom: 0;">Plan Your Stop</p>
+      <p class="footer-eyebrow">Plan Your Stop</p>
       <p class="footer-small">Vibes @ East Coast, 1 East Coast Road #01-07, Singapore 428750 · Daily 8:00 AM - 6:00 PM</p>
       <div class="footer-links">
-        <a href="/">HOME</a>
-        <a href="/cafe-menu">CAFE MENU</a>
-        <a href="/order">ORDER</a>
-        <a href="/visit-us">VISIT US</a>
+        <a href="/">Home</a>
+        <a href="/cafe-menu">Cafe Menu</a>
+        <a href="/order">Order</a>
+        <a href="/visit-us">Visit Us</a>
       </div>
       <p class="footer-small footer-instagram">
         <a class="footer-social-link" href="https://www.instagram.com/beccascafe.sg/" target="_blank" rel="noopener" aria-label="Visit Becca's Cafe on Instagram">

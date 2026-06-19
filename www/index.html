@@ -18,14 +18,17 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand-mark" href="/" aria-label="Becca's Cafe home page">
-        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
-      </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+      <button class="menu-toggle header-icon-button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      <a class="brand-mark" href="/" aria-label="Becca's Cafe home page">
+        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
+      </a>
+      <a class="header-order-link header-icon-button" href="/order" aria-label="Order cakes and bakes">
+        <span class="bag-icon" aria-hidden="true"></span>
+      </a>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="/" data-nav="home">Home</a>
         <a href="/cafe-menu" data-nav="menu">Cafe Menu</a>
@@ -35,73 +38,109 @@
     </div>
   </header>
 
-  <main id="main-content" class="page-shell">
-    <p class="page-chip reveal">Home Page</p>
-
-    <section class="hero hero-intro reveal">
-      <div class="hero-copy hero-copy-narrow">
-        <p class="eyebrow">Welcome to Becca's</p>
-        <h1 class="mega-title hero-title-stacked hero-title-home">
-          <span>A Little</span>
-          <span class="accent">Pink Escape</span>
-          <span>By The</span>
-          <span>East Coast</span>
-        </h1>
-        <p class="lede">Curated coffee, matcha, and thoughtful bites.</p>
+  <main id="main-content" class="page-shell page-shell-design home-page">
+    <section class="home-hero reveal" aria-labelledby="home-title">
+      <img src="assets/images/hero/cover.jpeg" alt="Cafe table scene at Becca's Cafe">
+      <div class="home-hero-copy">
+        <p class="eyebrow">East Coast Cafe</p>
+        <h1 id="home-title">Becca's Cafe</h1>
+        <p>Curated coffee, matcha, cakes, and quiet pink moments by the East Coast.</p>
         <div class="button-row">
-          <a class="btn btn-primary" href="/visit-us">Visit Our Cafe</a>
-          <a class="btn btn-outline" href="/order">Order Cakes &amp; Bakes</a>
+          <a class="btn btn-primary" href="/cafe-menu">View Menu</a>
+          <a class="btn btn-light" href="/visit-us">Visit Us</a>
         </div>
       </div>
-      <figure class="hero-product-scene" aria-label="Strawberry matcha, coffee, and pastry from Becca's Cafe">
-        <img class="hero-scene-drink" src="assets/images/menu/strawberry-cloud-matcha.png" alt="Strawberry Cloud Matcha from Becca's Cafe">
-        <img class="hero-scene-pastry" src="assets/images/menu/matcha-almond-croissant.png" alt="Matcha Almond Croissant from Becca's Cafe">
-        <img class="hero-scene-logo" src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
-      </figure>
     </section>
 
-    <section class="signature-showcase reveal">
-      <div class="section-heading-center">
+    <section class="signature-showcase reveal" aria-labelledby="signature-title">
+      <div class="section-heading-center design-section-heading">
         <p class="eyebrow">Our Signatures</p>
+        <h2 id="signature-title">Cafe favourites, made pretty.</h2>
       </div>
-      <div class="signature-grid">
-        <article class="signature-card">
-          <img src="assets/images/menu/cream-cloud-latte.png" alt="Latte from Becca's Cafe">
-          <h3>Latte</h3>
-          <p>Curated coffee with a soft, easy finish for slow mornings and gentle afternoons.</p>
-          <span class="signature-heart" aria-hidden="true">&#9825;</span>
+      <div class="signature-grid design-card-grid">
+        <article class="signature-card design-product-card">
+          <img src="assets/images/menu/cream-cloud-latte.png" alt="Cream Cloud Latte from Becca's Cafe">
+          <div>
+            <h3>Cream Cloud Latte</h3>
+            <p>Soft coffee, cloud cream, and a gentle finish.</p>
+          </div>
         </article>
-        <article class="signature-card">
+        <article class="signature-card design-product-card">
           <img src="assets/images/menu/strawberry-cloud-matcha.png" alt="Strawberry Cloud Matcha from Becca's Cafe">
-          <h3>Strawberry Cloud Matcha</h3>
-          <p>Cloud-soft matcha with berries and the signature pink look from the cafe menu.</p>
-          <span class="signature-heart" aria-hidden="true">&#9825;</span>
+          <div>
+            <h3>Strawberry Cloud Matcha</h3>
+            <p>Bright berries with smooth matcha and cream.</p>
+          </div>
         </article>
-        <article class="signature-card">
+        <article class="signature-card design-product-card">
           <img src="assets/images/menu/matcha-almond-croissant.png" alt="Matcha Almond Croissant from Becca's Cafe">
-          <h3>Matcha Almond Croissant</h3>
-          <p>Flaky layers, nutty sweetness, and a matcha finish that works any time of day.</p>
-          <span class="signature-heart" aria-hidden="true">&#9825;</span>
+          <div>
+            <h3>Matcha Almond Croissant</h3>
+            <p>Flaky layers with a nutty green tea finish.</p>
+          </div>
         </article>
-        <article class="signature-card">
+        <article class="signature-card design-product-card">
           <img src="assets/images/menu/basque-cheesecake.png" alt="Basque Cheesecake from Becca's Cafe">
-          <h3>Basque Cheesecake</h3>
-          <p>Burnt top, creamy middle, and a dessert favourite from the counter lineup.</p>
-          <span class="signature-heart" aria-hidden="true">&#9825;</span>
+          <div>
+            <h3>Basque Cheesecake</h3>
+            <p>Burnt top, creamy middle, easy to share.</p>
+          </div>
         </article>
       </div>
+    </section>
+
+    <section class="order-promo-band reveal" aria-labelledby="home-order-title">
+      <div>
+        <p class="eyebrow">Cakes &amp; Bakes</p>
+        <h2 id="home-order-title">Celebration sweets, baked to order.</h2>
+        <p>Whole cakes, brownies, crookies, and cookies are available with 2 - 3 days advance notice.</p>
+      </div>
+      <img src="assets/images/menu/brownie.png" alt="Brownies from Becca's Cafe">
+      <a class="btn btn-primary" href="/order">Order Now</a>
+    </section>
+
+    <section class="home-story reveal" aria-labelledby="home-story-title">
+      <figure>
+        <img src="assets/images/hero/cover.jpeg" alt="Cozy cafe setting at Becca's Cafe">
+      </figure>
+      <div>
+        <p class="eyebrow">A Little Pink Escape</p>
+        <h2 id="home-story-title">Coffee, matcha, pastries, and time to sit.</h2>
+        <p>Drop by for a quiet table, takeaway drinks, buttery bakes, and dessert moments that feel easy and warm.</p>
+        <a class="text-link" href="/visit-us">Plan your visit</a>
+      </div>
+    </section>
+
+    <section class="social-strip reveal" aria-label="Becca's Cafe gallery preview">
+      <img src="assets/images/menu/strawberry-cloud-matcha.png" alt="Strawberry Cloud Matcha">
+      <img src="assets/images/menu/croissant.png" alt="Croissant">
+      <img src="assets/images/menu/ham-egg-sando.png" alt="Ham and egg sando">
+      <img src="assets/images/menu/cookies.png" alt="Cookies">
+    </section>
+
+    <section class="amenity-strip reveal" aria-label="Cafe highlights">
+      <span>Specialty Coffee</span>
+      <span>Fresh Bakes</span>
+      <span>Dine In</span>
+      <span>Takeaway</span>
+    </section>
+
+    <section class="thanks-block reveal">
+      <p class="script-mark">Thank you</p>
+      <h2>For supporting our little pink cafe.</h2>
+      <a class="btn btn-outline" href="https://www.instagram.com/beccascafe.sg/" target="_blank" rel="noopener">Follow Along</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-main">
-      <p class="eyebrow" style="margin-bottom: 0;">Plan Your Stop</p>
+      <p class="footer-eyebrow">Plan Your Stop</p>
       <p class="footer-small">Vibes @ East Coast, 1 East Coast Road #01-07, Singapore 428750 · Daily 8:00 AM - 6:00 PM</p>
       <div class="footer-links">
-        <a href="/">HOME</a>
-        <a href="/cafe-menu">CAFE MENU</a>
-        <a href="/order">ORDER</a>
-        <a href="/visit-us">VISIT US</a>
+        <a href="/">Home</a>
+        <a href="/cafe-menu">Cafe Menu</a>
+        <a href="/order">Order</a>
+        <a href="/visit-us">Visit Us</a>
       </div>
       <p class="footer-small footer-instagram">
         <a class="footer-social-link" href="https://www.instagram.com/beccascafe.sg/" target="_blank" rel="noopener" aria-label="Visit Becca's Cafe on Instagram">
