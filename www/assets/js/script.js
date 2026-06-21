@@ -203,12 +203,104 @@
   });
 
   const root = document.querySelector("[data-menu-root]");
+  const isStaticMenuSheet = document.querySelector(".menu-sheet-page") !== null;
   const chipRow = document.querySelector("[data-category-nav]");
   const groupTabs = document.querySelectorAll("[data-menu-group]");
-  const hasMenuControls = Boolean(chipRow && groupTabs.length);
+  const hasMenuControls = Boolean(groupTabs.length);
   const apiBaseUrl = (window.BECCA_API_BASE_URL || "").replace(/\/$/, "");
+  const designMenuData = {
+    drinks: {
+      title: "Drinks",
+      categories: [
+        {
+          id: "cloud-collection",
+          title: "Cloud Collection",
+          summary: "",
+          art: "assets/images/menu/strawberry-cloud-matcha.png",
+          artType: "photo",
+          items: [
+            { name: "Strawberry Cloud Matcha", note: "House strawberry cream cloud.", price: "$8.00", image: "assets/images/menu/strawberry-cloud-matcha.png" },
+            { name: "Cream Cloud Latte", note: "Smooth espresso with vanilla cream.", price: "$7.50", image: "assets/images/menu/cream-cloud-latte.png" },
+            { name: "Chocolate Cloud Latte", note: "Rich chocolate with cream cloud.", price: "$7.50", image: "assets/images/menu/chocolate-cloud-latte.png" }
+          ]
+        },
+        {
+          id: "matcha",
+          title: "Matcha",
+          summary: "",
+          art: "assets/images/menu/matcha-almond-croissant.png",
+          artType: "photo",
+          items: [
+            { name: "Matcha Latte", note: "Ceremonial grade matcha.", price: "$6.50", image: "assets/images/menu/matcha-almond-croissant.png" },
+            { name: "Strawberry Cloud Matcha", price: "$8.00", image: "assets/images/menu/strawberry-cloud-matcha.png" },
+            { name: "Matcha Tonic", note: "Refreshing and light.", price: "$6.50", image: "assets/images/menu/non-coffee-icon.png" }
+          ]
+        },
+        {
+          id: "coffee",
+          title: "Coffee",
+          summary: "",
+          art: "assets/images/menu/coffee-icon.png",
+          artType: "icon",
+          items: [
+            { name: "Latte", price: "$6.00" },
+            { name: "Flat White", price: "$5.50" },
+            { name: "Americano", price: "$4.50" },
+            { name: "Mocha", price: "$6.50" },
+            { name: "Cappuccino", price: "$5.50" }
+          ]
+        },
+        {
+          id: "add-on",
+          title: "Add-On",
+          summary: "",
+          art: "assets/images/branding/logo.png",
+          artType: "badge",
+          footerNote: "Thank you for supporting local ♡",
+          items: [
+            { name: "Extra Shot", price: "$1.00" },
+            { name: "Oat Milk", price: "$1.00" }
+          ]
+        }
+      ]
+    },
+    savoury: {
+      title: "Savoury",
+      categories: [
+        {
+          id: "savoury",
+          title: "Savoury",
+          summary: "",
+          art: "assets/images/menu/egg-mayo-croissant.png",
+          artType: "photo",
+          items: [
+            { name: "Egg Mayo Croissant", price: "$7.50", image: "assets/images/menu/egg-mayo-croissant.png" },
+            { name: "Ham & Egg Croissant", price: "$8.50", image: "assets/images/menu/ham-egg-croissant.png" },
+            { name: "Ham & Egg Sando", price: "$9.00", image: "assets/images/menu/ham-egg-sando.png" }
+          ]
+        }
+      ]
+    },
+    pastries: {
+      title: "Pastries",
+      categories: [
+        {
+          id: "pastries",
+          title: "Pastries",
+          summary: "",
+          art: "assets/images/menu/croissant.png",
+          artType: "photo",
+          items: [
+            { name: "Almond Croissant", price: "$6.50", image: "assets/images/menu/matcha-almond-croissant.png" },
+            { name: "Pain au Chocolat", price: "$6.00", image: "assets/images/menu/pain-au-chocolat.png" },
+            { name: "Plain Croissant", price: "$5.00", image: "assets/images/menu/croissant.png" }
+          ]
+        }
+      ]
+    }
+  };
 
-  if (!root) {
+  if (!root || isStaticMenuSheet) {
     return;
   }
 
@@ -217,6 +309,10 @@
   let currentGroup = "drinks";
 
   async function loadMenuData() {
+    if (document.body.getAttribute("data-page") === "menu") {
+      return designMenuData;
+    }
+
     const response = await fetch(`${apiBaseUrl}/api/menu`, {
       headers: {
         Accept: "application/json"
@@ -355,7 +451,7 @@
 
     try {
       menuData = await loadMenuData();
-      menuGroupOrder = ["drinks", "food"].filter((key) => menuData && menuData[key]);
+      menuGroupOrder = ["drinks", "savoury", "pastries", "food"].filter((key) => menuData && menuData[key]);
 
       if (!menuGroupOrder.length) {
         renderMenuStatus("Menu unavailable", "No menu groups were returned by the API.");

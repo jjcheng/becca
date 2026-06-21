@@ -11,7 +11,8 @@
   <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="assets/icons/favicon.png">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=icon-font-1">
 </head>
 <body data-page="menu">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -19,15 +20,38 @@
   <header class="site-header">
     <div class="header-inner">
       <button class="menu-toggle header-icon-button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+        <svg class="header-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 12h16"></path>
+          <path d="M4 18h16"></path>
+          <path d="M4 6h16"></path>
+        </svg>
       </button>
       <a class="brand-mark" href="/" aria-label="Becca's Cafe home page">
-        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
+        <span class="brand-mark-lockup">
+          <span class="brand-script">Becca's</span>
+          <span class="brand-cafe">CAFE</span>
+        </span>
+        <svg class="brand-flower" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7">
+            <path d="M24 23c0-6 4-11 10-13"></path>
+            <path d="M24 24c-5-2-10-1-14 2"></path>
+            <path d="M25 24c-1 6 1 13 4 19"></path>
+            <path d="M24 26c-2 5-5 8-10 11"></path>
+            <path d="M27 10c-2 2-3 5-3 8"></path>
+            <path d="M33 9c1 4 0 7-3 10"></path>
+            <path d="M38 14c-1 4-4 6-8 8"></path>
+            <path d="M18 28c1-4 4-6 8-6"></path>
+            <path d="M14 39c4 0 7-2 9-6"></path>
+            <circle cx="24" cy="24" r="2"></circle>
+          </g>
+        </svg>
       </a>
       <a class="header-order-link header-icon-button" href="/order" aria-label="Order cakes and bakes">
-        <span class="bag-icon" aria-hidden="true"></span>
+        <svg class="header-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+          <path d="M3 6h18"></path>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
       </a>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="/" data-nav="home">Home</a>
@@ -38,37 +62,98 @@
     </div>
   </header>
 
-  <main id="main-content" class="page-shell page-shell-design menu-page">
-    <section class="menu-design-hero reveal" aria-labelledby="menu-title">
-      <p class="eyebrow">Made with love</p>
-      <h1 id="menu-title">Cafe Menu</h1>
-      <p>Handcrafted coffee, cloud drinks, savoury bites, and fresh bakes from the counter.</p>
-    </section>
-
-    <section class="menu-toolbar design-toolbar reveal" aria-label="Menu controls">
-      <div class="group-tabs" role="tablist" aria-label="Menu group">
-        <button class="group-tab is-active" type="button" role="tab" aria-selected="true" data-menu-group="drinks">Drinks</button>
-        <button class="group-tab" type="button" role="tab" aria-selected="false" data-menu-group="food">Food</button>
+  <main id="main-content" class="page-shell page-shell-design menu-page menu-sheet-page">
+    <section class="sheet-hero menu-sheet-hero reveal" aria-labelledby="menu-title">
+      <h1 id="menu-title">CAFÉ MENU</h1>
+      <div class="ornament" aria-hidden="true">✽</div>
+      <p>Handcrafted drinks and freshly made bites, made with love.</p>
+      <div class="group-tabs design-tabs" aria-label="Menu group">
+        <a class="group-tab is-active" href="#cloud-collection">Drinks</a>
+        <a class="group-tab" href="#savoury">Savoury</a>
+        <a class="group-tab" href="#pastries">Pastries</a>
       </div>
-      <div class="chip-row" data-category-nav aria-label="Menu categories"></div>
     </section>
 
-    <div class="menu-root design-menu-root" data-menu-root></div>
+    <section id="cloud-collection" class="menu-panel reveal" aria-labelledby="cloud-title">
+      <h2 id="cloud-title"><i class="detail-icon ri-cloud-line" aria-hidden="true"></i>Cloud Collection</h2>
+      <div class="cloud-card-grid">
+        <article class="sheet-product-card">
+          <img src="assets/images/menu/strawberry-cloud-matcha.png" alt="Strawberry Cloud Matcha">
+          <h3>Strawberry Cloud Matcha</h3>
+          <p>House strawberry cream cloud.</p>
+          <strong>$8.00</strong>
+        </article>
+        <article class="sheet-product-card">
+          <img src="assets/images/menu/cream-cloud-latte.png" alt="Cream Cloud Latte">
+          <h3>Cream Cloud Latte</h3>
+          <p>Smooth espresso with vanilla cream.</p>
+          <strong>$7.50</strong>
+        </article>
+        <article class="sheet-product-card">
+          <img src="assets/images/menu/chocolate-cloud-latte.png" alt="Chocolate Cloud Latte">
+          <h3>Chocolate Cloud Latte</h3>
+          <p>Rich chocolate with cream cloud.</p>
+          <strong>$7.50</strong>
+        </article>
+      </div>
+    </section>
 
-    <section class="menu-order-preview reveal">
+    <section class="menu-panel split-menu-panel reveal" aria-labelledby="coffee-title">
       <div>
-        <p class="eyebrow">Cakes &amp; Bakes To Order</p>
-        <h2 class="panel-title">Whole cakes, brownies, crookies, and cookies.</h2>
-        <p class="lede">Freshly baked with 2 - 3 days advance notice required. Browse the order catalogue and send through your preferred date when you are ready.</p>
+        <h2 id="coffee-title"><i class="detail-icon ri-cup-line" aria-hidden="true"></i>Coffee</h2>
+        <ul class="price-list">
+          <li><span>Latte</span><span>$6.00</span></li>
+          <li><span>Flat White</span><span>$5.50</span></li>
+          <li><span>Americano</span><span>$4.50</span></li>
+          <li><span>Mocha</span><span>$6.50</span></li>
+          <li><span>Cappuccino</span><span>$5.50</span></li>
+        </ul>
       </div>
-      <a class="btn btn-primary" href="/order">Go to Order</a>
+      <img src="assets/images/menu/coffee-icon.png" alt="Latte art coffee">
+    </section>
+
+    <section id="savoury" class="menu-panel split-menu-panel reveal" aria-labelledby="savoury-title">
+      <img src="assets/images/menu/ham-egg-croissant.png" alt="Ham and egg croissant">
+      <div>
+        <h2 id="savoury-title"><i class="detail-icon ri-leaf-line" aria-hidden="true"></i>Savoury</h2>
+        <ul class="price-list ruled-list">
+          <li><span>Egg Mayo Croissant</span><span>$7.50</span></li>
+          <li><span>Ham &amp; Egg Croissant</span><span>$8.50</span></li>
+          <li><span>Ham &amp; Egg Sando</span><span>$9.00</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="pastries" class="menu-panel split-menu-panel reveal" aria-labelledby="pastries-title">
+      <div>
+        <h2 id="pastries-title"><i class="detail-icon ri-cake-3-line" aria-hidden="true"></i>Pastries</h2>
+        <ul class="price-list ruled-list">
+          <li><span>Almond Croissant</span><span>$6.50</span></li>
+          <li><span>Pain au Chocolat</span><span>$6.00</span></li>
+          <li><span>Plain Croissant</span><span>$5.00</span></li>
+        </ul>
+      </div>
+      <img src="assets/images/menu/croissant.png" alt="Croissants">
+    </section>
+
+    <section class="feature-row reveal" aria-label="Cafe menu features">
+      <article><i class="detail-icon ri-heart-line" aria-hidden="true"></i><h3>Made Fresh</h3><p>In small batches</p></article>
+      <article><i class="detail-icon ri-sparkling-line" aria-hidden="true"></i><h3>Premium Ingredients</h3><p>Sourced with care</p></article>
+      <article><i class="detail-icon ri-hand-heart-line" aria-hidden="true"></i><h3>Made With Love</h3><p>In every bite and sip</p></article>
+      <article><i class="detail-icon ri-shopping-bag-line" aria-hidden="true"></i><h3>Takeaway Available</h3><p>Just let us know!</p></article>
+    </section>
+
+    <section class="info-banner reveal">
+      <div class="flower-line" aria-hidden="true">✽</div>
+      <p><strong>Dine In &amp; Takeaway Everyday</strong><br>8:00AM – 7:00PM</p>
+      <p><i class="detail-icon ri-map-pin-line" aria-hidden="true"></i><strong>Vibes @ East Coast</strong><br>1 East Coast Road, #01-XX, Singapore 428750</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-main">
       <p class="footer-eyebrow">Plan Your Stop</p>
-      <p class="footer-small">Vibes @ East Coast, 1 East Coast Road #01-07, Singapore 428750 · Daily 8:00 AM - 6:00 PM</p>
+      <p class="footer-small">Vibes @ East Coast, 1 East Coast Road #01-XX, Singapore 428750 · Daily 8:00 AM - 7:00 PM</p>
       <div class="footer-links">
         <a href="/">Home</a>
         <a href="/cafe-menu">Cafe Menu</a>
@@ -86,6 +171,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js?v=icon-font-1"></script>
 </body>
 </html>

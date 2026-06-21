@@ -11,7 +11,8 @@
   <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="assets/icons/favicon.png">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=icon-font-1">
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -19,15 +20,21 @@
   <header class="site-header">
     <div class="header-inner">
       <button class="menu-toggle header-icon-button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+        <svg class="header-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 12h16"></path>
+          <path d="M4 18h16"></path>
+          <path d="M4 6h16"></path>
+        </svg>
       </button>
       <a class="brand-mark" href="/" aria-label="Becca's Cafe home page">
-        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
+        <img src="assets/images/branding/logo.png" alt="Becca's Cafe">
       </a>
       <a class="header-order-link header-icon-button" href="/order" aria-label="Order cakes and bakes">
-        <span class="bag-icon" aria-hidden="true"></span>
+        <svg class="header-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+          <path d="M3 6h18"></path>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
       </a>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="/" data-nav="home">Home</a>
@@ -39,120 +46,132 @@
   </header>
 
   <main id="main-content" class="page-shell page-shell-design home-page">
-    <section class="home-hero reveal" aria-labelledby="home-title">
-      <img src="assets/images/hero/cover.jpeg" alt="Cafe table scene at Becca's Cafe">
-      <div class="home-hero-copy">
-        <p class="eyebrow">East Coast Cafe</p>
-        <h1 id="home-title">Becca's Cafe</h1>
-        <p>Curated coffee, matcha, cakes, and quiet pink moments by the East Coast.</p>
+    <section class="home-reference-hero reveal" aria-labelledby="home-title">
+      <div class="home-reference-copy">
+        <p class="home-reference-eyebrow">WELCOME TO BECCA'S</p>
+        <h1 id="home-title">A LITTLE <span>PINK</span> ESCAPE BY THE EAST COAST</h1>
+        <div class="home-reference-divider" aria-hidden="true">
+          <span></span>
+          <i><svg viewBox="0 0 16 16" focusable="false"><circle cx="5.5" cy="5.5" r="3.15"></circle><circle cx="10.5" cy="5.5" r="3.15"></circle><circle cx="5.5" cy="10.5" r="3.15"></circle><circle cx="10.5" cy="10.5" r="3.15"></circle></svg></i>
+          <span></span>
+        </div>
+        <p class="home-reference-blurb">Flaky pastries, handcrafted matcha, cloud coffees and slow mornings.</p>
         <div class="button-row">
-          <a class="btn btn-primary" href="/cafe-menu">View Menu</a>
-          <a class="btn btn-light" href="/visit-us">Visit Us</a>
+          <a class="btn btn-primary" href="/visit-us">Visit Our Café</a>
+          <a class="btn btn-light" href="/order">Order Cakes &amp; Bakes</a>
         </div>
       </div>
-    </section>
-
-    <section class="signature-showcase reveal" aria-labelledby="signature-title">
-      <div class="section-heading-center design-section-heading">
-        <p class="eyebrow">Our Signatures</p>
-        <h2 id="signature-title">Cafe favourites, made pretty.</h2>
-      </div>
-      <div class="signature-grid design-card-grid">
-        <article class="signature-card design-product-card">
-          <img src="assets/images/menu/cream-cloud-latte.png" alt="Cream Cloud Latte from Becca's Cafe">
-          <div>
-            <h3>Cream Cloud Latte</h3>
-            <p>Soft coffee, cloud cream, and a gentle finish.</p>
-          </div>
-        </article>
-        <article class="signature-card design-product-card">
-          <img src="assets/images/menu/strawberry-cloud-matcha.png" alt="Strawberry Cloud Matcha from Becca's Cafe">
-          <div>
-            <h3>Strawberry Cloud Matcha</h3>
-            <p>Bright berries with smooth matcha and cream.</p>
-          </div>
-        </article>
-        <article class="signature-card design-product-card">
-          <img src="assets/images/menu/matcha-almond-croissant.png" alt="Matcha Almond Croissant from Becca's Cafe">
-          <div>
-            <h3>Matcha Almond Croissant</h3>
-            <p>Flaky layers with a nutty green tea finish.</p>
-          </div>
-        </article>
-        <article class="signature-card design-product-card">
-          <img src="assets/images/menu/basque-cheesecake.png" alt="Basque Cheesecake from Becca's Cafe">
-          <div>
-            <h3>Basque Cheesecake</h3>
-            <p>Burnt top, creamy middle, easy to share.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="order-promo-band reveal" aria-labelledby="home-order-title">
-      <div>
-        <p class="eyebrow">Cakes &amp; Bakes</p>
-        <h2 id="home-order-title">Celebration sweets, baked to order.</h2>
-        <p>Whole cakes, brownies, crookies, and cookies are available with 2 - 3 days advance notice.</p>
-      </div>
-      <img src="assets/images/menu/brownie.png" alt="Brownies from Becca's Cafe">
-      <a class="btn btn-primary" href="/order">Order Now</a>
-    </section>
-
-    <section class="home-story reveal" aria-labelledby="home-story-title">
-      <figure>
-        <img src="assets/images/hero/cover.jpeg" alt="Cozy cafe setting at Becca's Cafe">
+      <figure class="home-reference-visual" aria-hidden="true">
+        <div class="home-reference-scene">
+          <img class="home-reference-hero-photo" src="assets/images/home/hero-photo.jpeg" alt="">
+        </div>
       </figure>
-      <div>
-        <p class="eyebrow">A Little Pink Escape</p>
-        <h2 id="home-story-title">Coffee, matcha, pastries, and time to sit.</h2>
-        <p>Drop by for a quiet table, takeaway drinks, buttery bakes, and dessert moments that feel easy and warm.</p>
-        <a class="text-link" href="/visit-us">Plan your visit</a>
+    </section>
+
+    <section class="home-signature-section reveal" aria-labelledby="signature-title">
+      <div class="home-title-stack">
+        <h2 id="signature-title">Our Signatures</h2>
+        <div class="home-reference-divider" aria-hidden="true">
+          <span></span>
+          <i><svg viewBox="0 0 16 16" focusable="false"><circle cx="5.5" cy="5.5" r="3.15"></circle><circle cx="10.5" cy="5.5" r="3.15"></circle><circle cx="5.5" cy="10.5" r="3.15"></circle><circle cx="10.5" cy="10.5" r="3.15"></circle></svg></i>
+          <span></span>
+        </div>
+      </div>
+      <div class="home-signature-grid">
+        <article class="home-signature-card">
+          <img src="assets/images/home/signature-matcha.jpeg?v=sig-photo-2" alt="Matcha Latte from Becca's Cafe">
+          <h3>Matcha Latte</h3>
+          <p>Ceremonial grade matcha whisked to order.</p>
+          <span class="home-signature-heart" aria-hidden="true">♡</span>
+        </article>
+        <article class="home-signature-card">
+          <img src="assets/images/home/signature-strawberry.jpeg?v=sig-photo-2" alt="Strawberry Cloud Matcha from Becca's Cafe">
+          <h3>Strawberry Cloud Matcha</h3>
+          <p>House strawberry cream cloud.</p>
+          <span class="home-signature-heart" aria-hidden="true">♡</span>
+        </article>
+        <article class="home-signature-card">
+          <img src="assets/images/home/signature-basque.jpeg?v=sig-photo-2" alt="Basque Cheesecake from Becca's Cafe">
+          <h3>Basque Cheesecake</h3>
+          <p>Creamy centre, caramelised top.</p>
+          <span class="home-signature-heart" aria-hidden="true">♡</span>
+        </article>
       </div>
     </section>
 
-    <section class="social-strip reveal" aria-label="Becca's Cafe gallery preview">
-      <img src="assets/images/menu/strawberry-cloud-matcha.png" alt="Strawberry Cloud Matcha">
-      <img src="assets/images/menu/croissant.png" alt="Croissant">
-      <img src="assets/images/menu/ham-egg-sando.png" alt="Ham and egg sando">
-      <img src="assets/images/menu/cookies.png" alt="Cookies">
+    <section class="home-order-sheet reveal" aria-labelledby="home-order-title">
+      <div class="home-order-copy">
+        <p class="eyebrow">Order Cakes &amp; Bakes</p>
+        <div class="home-reference-divider" aria-hidden="true">
+          <span></span>
+          <i><svg viewBox="0 0 16 16" focusable="false"><circle cx="5.5" cy="5.5" r="3.15"></circle><circle cx="10.5" cy="5.5" r="3.15"></circle><circle cx="5.5" cy="10.5" r="3.15"></circle><circle cx="10.5" cy="10.5" r="3.15"></circle></svg></i>
+          <span></span>
+        </div>
+        <h2 id="home-order-title">Made to order. Made with love.</h2>
+        <p>Whole cakes, brownies and more &mdash; order 2&ndash;3 days in advance.</p>
+        <a class="btn btn-primary" href="/order">Order Now</a>
+      </div>
+      <img src="assets/images/home/order-basque.jpeg" alt="Basque Cheesecake from Becca's Cafe">
     </section>
 
-    <section class="amenity-strip reveal" aria-label="Cafe highlights">
-      <span>Specialty Coffee</span>
-      <span>Fresh Bakes</span>
-      <span>Dine In</span>
-      <span>Takeaway</span>
+    <section class="home-review-section reveal" aria-labelledby="favourites-title">
+      <div class="home-title-stack">
+        <h2 id="favourites-title">Customer Favourites</h2>
+        <div class="home-stars" aria-hidden="true">★★★★★</div>
+      </div>
+      <div class="home-review-grid">
+        <article class="home-review-card">
+          <span class="home-review-quote" aria-hidden="true">”</span>
+          <blockquote>Best matcha I've had in Singapore.</blockquote>
+          <p>&mdash; Google Review</p>
+        </article>
+        <article class="home-review-card">
+          <span class="home-review-quote" aria-hidden="true">”</span>
+          <blockquote>The Basque cheesecake is incredible.</blockquote>
+          <p>&mdash; Google Review</p>
+        </article>
+        <article class="home-review-card">
+          <span class="home-review-quote" aria-hidden="true">”</span>
+          <blockquote>Cute café with such a cozy vibe.</blockquote>
+          <p>&mdash; Google Review</p>
+        </article>
+      </div>
     </section>
 
-    <section class="thanks-block reveal">
-      <p class="script-mark">Thank you</p>
-      <h2>For supporting our little pink cafe.</h2>
-      <a class="btn btn-outline" href="https://www.instagram.com/beccascafe.sg/" target="_blank" rel="noopener">Follow Along</a>
+    <section class="home-amenity-grid reveal" aria-label="Cafe highlights">
+      <article class="home-amenity-item">
+        <i class="detail-icon ri-map-pin-line" aria-hidden="true"></i>
+        <div>
+          <strong>EAST COAST</strong>
+          <p>Neighbourhood Café</p>
+        </div>
+      </article>
+      <article class="home-amenity-item">
+        <i class="detail-icon ri-time-line" aria-hidden="true"></i>
+        <div>
+          <strong>DAILY</strong>
+          <p>8:00AM &ndash; 7:00PM</p>
+        </div>
+      </article>
+      <article class="home-amenity-item">
+        <i class="detail-icon ri-takeaway-line" aria-hidden="true"></i>
+        <div>
+          <strong>MADE FRESH</strong>
+          <p>In small batches</p>
+        </div>
+      </article>
+      <article class="home-amenity-item">
+        <i class="detail-icon ri-instagram-line" aria-hidden="true"></i>
+        <div>
+          <strong>FOLLOW US</strong>
+          <p>
+            <a href="https://www.instagram.com/beccas.cafe/" target="_blank">@beccascafe.sg</a>
+          </p>
+        </div>
+      </article>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-main">
-      <p class="footer-eyebrow">Plan Your Stop</p>
-      <p class="footer-small">Vibes @ East Coast, 1 East Coast Road #01-07, Singapore 428750 · Daily 8:00 AM - 6:00 PM</p>
-      <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="/cafe-menu">Cafe Menu</a>
-        <a href="/order">Order</a>
-        <a href="/visit-us">Visit Us</a>
-      </div>
-      <p class="footer-small footer-instagram">
-        <a class="footer-social-link" href="https://www.instagram.com/beccascafe.sg/" target="_blank" rel="noopener" aria-label="Visit Becca's Cafe on Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95Zm8.95 1.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 6.4A5.6 5.6 0 1 1 6.4 12 5.6 5.6 0 0 1 12 6.4Zm0 1.8A3.8 3.8 0 1 0 15.8 12 3.81 3.81 0 0 0 12 8.2Z"/>
-          </svg>
-          <span>@beccascafe.sg</span>
-        </a>
-      </p>
-    </div>
-  </footer>
-
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js?v=icon-font-1"></script>
 </body>
 </html>

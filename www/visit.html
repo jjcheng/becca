@@ -11,7 +11,8 @@
   <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="assets/icons/favicon.png">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=icon-font-1">
 </head>
 <body data-page="visit">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -19,15 +20,38 @@
   <header class="site-header">
     <div class="header-inner">
       <button class="menu-toggle header-icon-button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+        <svg class="header-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 12h16"></path>
+          <path d="M4 18h16"></path>
+          <path d="M4 6h16"></path>
+        </svg>
       </button>
       <a class="brand-mark" href="/" aria-label="Becca's Cafe home page">
-        <img src="assets/images/branding/logo.png" alt="Becca's Cafe logo">
+        <span class="brand-mark-lockup">
+          <span class="brand-script">Becca's</span>
+          <span class="brand-cafe">CAFE</span>
+        </span>
+        <svg class="brand-flower" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7">
+            <path d="M24 23c0-6 4-11 10-13"></path>
+            <path d="M24 24c-5-2-10-1-14 2"></path>
+            <path d="M25 24c-1 6 1 13 4 19"></path>
+            <path d="M24 26c-2 5-5 8-10 11"></path>
+            <path d="M27 10c-2 2-3 5-3 8"></path>
+            <path d="M33 9c1 4 0 7-3 10"></path>
+            <path d="M38 14c-1 4-4 6-8 8"></path>
+            <path d="M18 28c1-4 4-6 8-6"></path>
+            <path d="M14 39c4 0 7-2 9-6"></path>
+            <circle cx="24" cy="24" r="2"></circle>
+          </g>
+        </svg>
       </a>
       <a class="header-order-link header-icon-button" href="/order" aria-label="Order cakes and bakes">
-        <span class="bag-icon" aria-hidden="true"></span>
+        <svg class="header-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+          <path d="M3 6h18"></path>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
       </a>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="/" data-nav="home">Home</a>
@@ -38,99 +62,68 @@
     </div>
   </header>
 
-  <main id="main-content" class="page-shell page-shell-design visit-page">
-    <section class="visit-hero reveal" aria-labelledby="visit-title">
-      <img src="assets/images/hero/cover.jpeg" alt="Cafe setting at Becca's Cafe">
-      <div>
+  <main id="main-content" class="page-shell page-shell-design visit-page visit-sheet-page">
+    <section class="sheet-hero visit-sheet-hero reveal" aria-labelledby="visit-title">
+      <img src="assets/images/hero/cover.jpeg" alt="Becca's cafe entrance">
+      <div class="visit-sheet-copy">
         <p class="eyebrow">Visit Us</p>
-        <h1 id="visit-title">Find your pink corner.</h1>
-        <p>Stop by for coffee, matcha, pastries, dine-in breaks, and takeaway treats at Vibes @ East Coast.</p>
+        <h1 id="visit-title">A cozy café made for slow mornings and sweet moments.</h1>
+        <div class="ornament" aria-hidden="true">✽</div>
+        <p>We can’t wait to welcome you to Becca’s.</p>
       </div>
     </section>
 
-    <section class="visit-overview reveal">
-      <article class="info-panel visit-info-panel">
-        <ul class="contact-list">
-          <li class="contact-item">
-            <span class="contact-label">Address</span>
-            <span class="contact-value">1 East Coast Road #01-07</span>
-            <span class="contact-subtext">Singapore 428750</span>
-          </li>
-          <li class="contact-item">
-            <span class="contact-label">Hours</span>
-            <span class="contact-value">Daily</span>
-            <span class="contact-subtext">8:00 AM - 6:00 PM</span>
-          </li>
-          <li class="contact-item">
-            <span class="contact-label">Dine In &amp; Takeaway</span>
-            <span class="contact-value">Walk-ins welcome</span>
-            <span class="contact-subtext">Drop by for drinks, food, and desserts any day of the week.</span>
-          </li>
-          <li class="contact-item">
-            <span class="contact-label">Email</span>
-            <a class="contact-link" href="mailto:beccascafe.sg@gmail.com">beccascafe.sg@gmail.com</a>
-          </li>
-          <li class="contact-item">
-            <span class="contact-label">Instagram</span>
-            <a class="contact-link" href="https://www.instagram.com/beccascafe.sg/" target="_blank" rel="noopener">@beccascafe.sg</a>
-          </li>
-        </ul>
-        <div class="button-row">
-          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=1%20East%20Coast%20Road%20%2301-07%2C%20Singapore%20428750" target="_blank" rel="noopener">Get Directions</a>
-        </div>
+    <section class="find-hours-panel reveal" aria-label="Find us and opening hours">
+      <article>
+        <h2><i class="detail-icon ri-map-pin-line" aria-hidden="true"></i>Find Us</h2>
+        <p><strong>Becca’s Café</strong><br>1 East Coast Road, #01-XX<br>Singapore 428750</p>
+        <p>(Located in the heart of the East Coast neighbourhood)</p>
       </article>
+      <article>
+        <h2><i class="detail-icon ri-time-line" aria-hidden="true"></i>Opening Hours</h2>
+        <ul class="hours-list">
+          <li><span>Monday</span><span>Closed</span></li>
+          <li><span>Tuesday – Friday</span><span>8:00AM – 7:00PM</span></li>
+          <li><span>Saturday – Sunday</span><span>8:00AM – 8:00PM</span></li>
+        </ul>
+        <p class="script-mark">See you soon! ♡</p>
+      </article>
+    </section>
 
-      <div class="map-card map-illustration" aria-label="Map to Becca's Cafe at Vibes @ East Coast">
-        <span class="map-water" aria-hidden="true"></span>
-        <span class="map-green" aria-hidden="true"></span>
-        <span class="map-road map-road-main" aria-hidden="true"></span>
-        <span class="map-road map-road-secondary" aria-hidden="true"></span>
-        <span class="map-road map-road-third" aria-hidden="true"></span>
-        <span class="map-pin" aria-hidden="true">
-          <span class="map-pin-dot"></span>
-          <span class="map-pin-label">Becca's Cafe<br><small>Vibes @ East Coast</small></span>
-        </span>
+    <section class="map-sheet-panel reveal" aria-label="Map to Becca's Cafe">
+      <iframe title="Becca's Cafe map" src="https://www.google.com/maps?q=1+East+Coast+Road,+Singapore+428750&output=embed" loading="lazy"></iframe>
+    </section>
+
+    <section class="feature-row reveal" aria-label="Visit features">
+      <article><i class="detail-icon ri-cup-line" aria-hidden="true"></i><h3>Cozy Ambience</h3><p>Relax and unwind with us.</p></article>
+      <article><i class="detail-icon ri-cake-3-line" aria-hidden="true"></i><h3>Made Fresh</h3><p>Daily bakes and quality ingredients.</p></article>
+      <article><i class="detail-icon ri-heart-line" aria-hidden="true"></i><h3>Pet Friendly</h3><p>Well-behaved pets are welcome!</p></article>
+      <article><i class="detail-icon ri-wifi-line" aria-hidden="true"></i><h3>Free Wi-Fi</h3><p>Stay awhile and enjoy the vibes.</p></article>
+    </section>
+
+    <section class="stay-touch-panel reveal" aria-labelledby="stay-touch-title">
+      <img src="assets/images/menu/cream-cloud-latte.png" alt="Coffee on cafe table">
+      <div>
+        <h2 id="stay-touch-title">Let’s Stay In Touch</h2>
+        <p>Follow us for daily bakes, café moments and updates!</p>
+        <div class="social-pair">
+          <a href="https://www.instagram.com/beccascafe.sg/" target="_blank" rel="noopener"><i class="detail-icon ri-instagram-line" aria-hidden="true"></i>@beccascafe.sg</a>
+          <span><i class="detail-icon ri-store-line" aria-hidden="true"></i>Becca’s Café</span>
+        </div>
       </div>
     </section>
 
-    <section class="contact-grid reveal">
-      <form class="info-panel contact-form" data-mailto-form data-mailto-to="beccascafe.sg@gmail.com" data-mailto-subject="Becca's Cafe website enquiry">
-        <p class="eyebrow">Send Us A Message</p>
-        <h2>Ask about visits, cakes, or menu items.</h2>
-        <p class="contact-note">Questions about visits, menu items, or cake orders are welcome.</p>
-        <div class="field">
-          <label for="contact-name">Name</label>
-          <input id="contact-name" name="name" type="text" required>
-        </div>
-        <div class="field">
-          <label for="contact-email">Email</label>
-          <input id="contact-email" name="email" type="email" required>
-        </div>
-        <div class="field">
-          <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="message" required></textarea>
-        </div>
-        <button class="btn btn-primary" type="submit">Send Message</button>
-      </form>
-
-      <div class="visit-gallery" aria-label="Cafe gallery preview">
-        <img src="assets/images/menu/cream-cloud-latte.png" alt="Cream Cloud Latte">
-        <img src="assets/images/menu/kouign-amann.png" alt="Kouign Amann">
-        <img src="assets/images/menu/strawberry-cloud-matcha.png" alt="Strawberry Cloud Matcha">
-        <img src="assets/images/menu/cookies.png" alt="Cookies">
-      </div>
-    </section>
-
-    <section class="thanks-block reveal">
-      <p class="script-mark">See you soon</p>
-      <h2>Come by for something soft, sweet, and freshly made.</h2>
+    <section class="note-whatsapp-panel reveal">
+      <div class="flower-line" aria-hidden="true">✽</div>
+      <p>We can’t wait to meet you at Becca’s! 💕</p>
+      <p><i class="detail-icon ri-whatsapp-line" aria-hidden="true"></i><strong>Have questions?</strong><br>WhatsApp us at +65 9123 4567</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-main">
       <p class="footer-eyebrow">Plan Your Stop</p>
-      <p class="footer-small">Vibes @ East Coast, 1 East Coast Road #01-07, Singapore 428750 · Daily 8:00 AM - 6:00 PM</p>
+      <p class="footer-small">Vibes @ East Coast, 1 East Coast Road #01-XX, Singapore 428750 · Daily 8:00 AM - 7:00 PM</p>
       <div class="footer-links">
         <a href="/">Home</a>
         <a href="/cafe-menu">Cafe Menu</a>
@@ -148,6 +141,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js?v=icon-font-1"></script>
 </body>
 </html>
