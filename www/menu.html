@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" href="assets/icons/favicon.png">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
-  <link rel="stylesheet" href="assets/css/styles.css?v=icon-font-1">
+  <link rel="stylesheet" href="assets/css/styles.css?v=menu-ref-3">
 </head>
 <body data-page="menu">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -27,24 +27,7 @@
         </svg>
       </button>
       <a class="brand-mark" href="/" aria-label="Becca's Cafe home page">
-        <span class="brand-mark-lockup">
-          <span class="brand-script">Becca's</span>
-          <span class="brand-cafe">CAFE</span>
-        </span>
-        <svg class="brand-flower" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7">
-            <path d="M24 23c0-6 4-11 10-13"></path>
-            <path d="M24 24c-5-2-10-1-14 2"></path>
-            <path d="M25 24c-1 6 1 13 4 19"></path>
-            <path d="M24 26c-2 5-5 8-10 11"></path>
-            <path d="M27 10c-2 2-3 5-3 8"></path>
-            <path d="M33 9c1 4 0 7-3 10"></path>
-            <path d="M38 14c-1 4-4 6-8 8"></path>
-            <path d="M18 28c1-4 4-6 8-6"></path>
-            <path d="M14 39c4 0 7-2 9-6"></path>
-            <circle cx="24" cy="24" r="2"></circle>
-          </g>
-        </svg>
+        <img src="assets/images/branding/logo.png" alt="Becca's Cafe">
       </a>
       <a class="header-order-link header-icon-button" href="/order" aria-label="Order cakes and bakes">
         <svg class="header-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -62,10 +45,14 @@
     </div>
   </header>
 
-  <main id="main-content" class="page-shell page-shell-design menu-page menu-sheet-page">
+  <main id="main-content" class="page-shell page-shell-design menu-page menu-sheet-page menu-reference-page">
     <section class="sheet-hero menu-sheet-hero reveal" aria-labelledby="menu-title">
       <h1 id="menu-title">CAFÉ MENU</h1>
-      <div class="ornament" aria-hidden="true">✽</div>
+      <div class="home-reference-divider" aria-hidden="true">
+        <span></span>
+        <i><svg viewBox="0 0 16 16" focusable="false"><circle cx="5.5" cy="5.5" r="3.15"></circle><circle cx="10.5" cy="5.5" r="3.15"></circle><circle cx="5.5" cy="10.5" r="3.15"></circle><circle cx="10.5" cy="10.5" r="3.15"></circle></svg></i>
+        <span></span>
+      </div>
       <p>Handcrafted drinks and freshly made bites, made with love.</p>
       <div class="group-tabs design-tabs" aria-label="Menu group">
         <a class="group-tab is-active" href="#cloud-collection">Drinks</a>
@@ -78,19 +65,19 @@
       <h2 id="cloud-title"><i class="detail-icon ri-cloud-line" aria-hidden="true"></i>Cloud Collection</h2>
       <div class="cloud-card-grid">
         <article class="sheet-product-card">
-          <img src="assets/images/menu/strawberry-cloud-matcha.png" alt="Strawberry Cloud Matcha">
+          <img src="assets/images/menu/reference/strawberry-cloud-matcha.jpeg" alt="Strawberry Cloud Matcha">
           <h3>Strawberry Cloud Matcha</h3>
           <p>House strawberry cream cloud.</p>
           <strong>$8.00</strong>
         </article>
         <article class="sheet-product-card">
-          <img src="assets/images/menu/cream-cloud-latte.png" alt="Cream Cloud Latte">
+          <img src="assets/images/menu/reference/cream-cloud-latte.jpeg" alt="Cream Cloud Latte">
           <h3>Cream Cloud Latte</h3>
           <p>Smooth espresso with vanilla cream.</p>
           <strong>$7.50</strong>
         </article>
         <article class="sheet-product-card">
-          <img src="assets/images/menu/chocolate-cloud-latte.png" alt="Chocolate Cloud Latte">
+          <img src="assets/images/menu/reference/chocolate-cloud-latte.jpeg" alt="Chocolate Cloud Latte">
           <h3>Chocolate Cloud Latte</h3>
           <p>Rich chocolate with cream cloud.</p>
           <strong>$7.50</strong>
@@ -109,23 +96,24 @@
           <li><span>Cappuccino</span><span>$5.50</span></li>
         </ul>
       </div>
-      <img src="assets/images/menu/coffee-icon.png" alt="Latte art coffee">
+      <img src="assets/images/menu/reference/coffee-latte.jpeg" alt="Latte art coffee">
     </section>
 
-    <section id="savoury" class="menu-panel split-menu-panel reveal" aria-labelledby="savoury-title">
-      <img src="assets/images/menu/ham-egg-croissant.png" alt="Ham and egg croissant">
-      <div>
-        <h2 id="savoury-title"><i class="detail-icon ri-leaf-line" aria-hidden="true"></i>Savoury</h2>
+    <section id="savoury" class="menu-panel split-menu-panel menu-list-photo-panel menu-list-photo-left reveal" aria-labelledby="savoury-title">
+      <h2 id="savoury-title"><i class="detail-icon ri-leaf-line" aria-hidden="true"></i>Savoury</h2>
+      <img src="assets/images/menu/reference/ham-egg-croissant.jpeg" alt="Ham and egg croissant">
+      <div class="menu-list-copy">
         <ul class="price-list ruled-list">
           <li><span>Egg Mayo Croissant</span><span>$7.50</span></li>
           <li><span>Ham &amp; Egg Croissant</span><span>$8.50</span></li>
           <li><span>Ham &amp; Egg Sando</span><span>$9.00</span></li>
         </ul>
       </div>
+      <span class="menu-panel-arrow" aria-hidden="true">›</span>
     </section>
 
-    <section id="pastries" class="menu-panel split-menu-panel reveal" aria-labelledby="pastries-title">
-      <div>
+    <section id="pastries" class="menu-panel split-menu-panel menu-list-photo-panel menu-list-photo-right reveal" aria-labelledby="pastries-title">
+      <div class="menu-list-copy">
         <h2 id="pastries-title"><i class="detail-icon ri-cake-3-line" aria-hidden="true"></i>Pastries</h2>
         <ul class="price-list ruled-list">
           <li><span>Almond Croissant</span><span>$6.50</span></li>
@@ -133,43 +121,50 @@
           <li><span>Plain Croissant</span><span>$5.00</span></li>
         </ul>
       </div>
-      <img src="assets/images/menu/croissant.png" alt="Croissants">
+      <img src="assets/images/menu/reference/croissants.jpeg" alt="Croissants">
     </section>
 
-    <section class="feature-row reveal" aria-label="Cafe menu features">
+    <!-- <section class="feature-row reveal" aria-label="Cafe menu features">
       <article><i class="detail-icon ri-heart-line" aria-hidden="true"></i><h3>Made Fresh</h3><p>In small batches</p></article>
       <article><i class="detail-icon ri-sparkling-line" aria-hidden="true"></i><h3>Premium Ingredients</h3><p>Sourced with care</p></article>
       <article><i class="detail-icon ri-hand-heart-line" aria-hidden="true"></i><h3>Made With Love</h3><p>In every bite and sip</p></article>
       <article><i class="detail-icon ri-shopping-bag-line" aria-hidden="true"></i><h3>Takeaway Available</h3><p>Just let us know!</p></article>
+    </section> -->
+
+    <section class="home-amenity-grid reveal" aria-label="Cafe highlights">
+      <article class="home-amenity-item">
+        <i class="detail-icon ri-map-pin-line" aria-hidden="true"></i>
+        <div>
+          <strong>EAST COAST</strong>
+          <p>Neighbourhood Café</p>
+        </div>
+      </article>
+      <article class="home-amenity-item">
+        <i class="detail-icon ri-time-line" aria-hidden="true"></i>
+        <div>
+          <strong>DAILY</strong>
+          <p>8:00AM &ndash; 7:00PM</p>
+        </div>
+      </article>
+      <article class="home-amenity-item">
+        <i class="detail-icon ri-takeaway-line" aria-hidden="true"></i>
+        <div>
+          <strong>MADE FRESH</strong>
+          <p>In small batches</p>
+        </div>
+      </article>
+      <article class="home-amenity-item">
+        <i class="detail-icon ri-instagram-line" aria-hidden="true"></i>
+        <div>
+          <strong>FOLLOW US</strong>
+          <p>
+            <a href="https://www.instagram.com/beccas.cafe/" target="_blank">@beccascafe.sg</a>
+          </p>
+        </div>
+      </article>
     </section>
 
-    <section class="info-banner reveal">
-      <div class="flower-line" aria-hidden="true">✽</div>
-      <p><strong>Dine In &amp; Takeaway Everyday</strong><br>8:00AM – 7:00PM</p>
-      <p><i class="detail-icon ri-map-pin-line" aria-hidden="true"></i><strong>Vibes @ East Coast</strong><br>1 East Coast Road, #01-XX, Singapore 428750</p>
-    </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="footer-main">
-      <p class="footer-eyebrow">Plan Your Stop</p>
-      <p class="footer-small">Vibes @ East Coast, 1 East Coast Road #01-XX, Singapore 428750 · Daily 8:00 AM - 7:00 PM</p>
-      <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="/cafe-menu">Cafe Menu</a>
-        <a href="/order">Order</a>
-        <a href="/visit-us">Visit Us</a>
-      </div>
-      <p class="footer-small footer-instagram">
-        <a class="footer-social-link" href="https://www.instagram.com/beccascafe.sg/" target="_blank" rel="noopener" aria-label="Visit Becca's Cafe on Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95Zm8.95 1.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 6.4A5.6 5.6 0 1 1 6.4 12 5.6 5.6 0 0 1 12 6.4Zm0 1.8A3.8 3.8 0 1 0 15.8 12 3.81 3.81 0 0 0 12 8.2Z"/>
-          </svg>
-          <span>@beccascafe.sg</span>
-        </a>
-      </p>
-    </div>
-  </footer>
 
   <script src="assets/js/script.js?v=icon-font-1"></script>
 </body>
