@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
-import AmenityGrid from "../components/AmenityGrid";
-import Divider from "../components/Divider";
-import Header from "../components/Header";
+import Divider from "../components/divider";
+import Header from "../components/header";
 
 export const metadata: Metadata = {
   title: "Cafe Menu",
@@ -74,7 +73,7 @@ export default function CafeMenuPage() {
       <Header />
       <main id="main-content" className="page-shell page-shell-design menu-page menu-sheet-page menu-reference-page">
         <section className="sheet-hero menu-sheet-hero reveal" aria-labelledby="menu-title">
-          <h1 id="menu-title">CAFE MENU</h1>
+          <h1 id="menu-title">CAF&Eacute; MENU</h1>
           <Divider />
           <p>Handcrafted drinks and freshly made bites, made with love.</p>
           <div className="group-tabs design-tabs" aria-label="Menu group">
@@ -122,8 +121,6 @@ export default function CafeMenuPage() {
           </div>
           <img src="/assets/images/menu/reference/croissants.jpeg" alt="Croissants" />
         </section>
-
-        <AmenityGrid />
       </main>
     </>
   );

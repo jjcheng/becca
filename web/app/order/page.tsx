@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Fragment } from "react";
 
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Header from "../components/header";
+import SheetHeading from "../components/sheet-heading";
+import WhatsappNotePanel from "../components/whatsapp-note-panel";
 
 export const metadata: Metadata = {
   title: "Order",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 
 const cakes = [
   {
-    image: "/assets/images/menu/basque-cheesecake.png",
+    image: "/assets/images/order/reference/basque-cheesecake.jpeg",
     alt: "Basque Cheesecake",
     title: "Basque Cheesecake",
     text: "Creamy, rich and perfectly caramelised on top.",
@@ -26,7 +27,7 @@ const cakes = [
     subject: "Order - Basque Cheesecake"
   },
   {
-    image: "/assets/images/menu/oreo-cheesecake.png",
+    image: "/assets/images/order/reference/matcha-basque-cheesecake.jpeg",
     alt: "Matcha Basque Cheesecake",
     title: "Matcha Basque Cheesecake",
     text: "Creamy basque cheesecake with premium matcha.",
@@ -36,7 +37,7 @@ const cakes = [
     subject: "Order - Matcha Basque Cheesecake"
   },
   {
-    image: "/assets/images/menu/brownie.png",
+    image: "/assets/images/order/reference/blackout-brownies.jpeg",
     alt: "Blackout Brownies",
     title: "Blackout Brownies",
     text: "Fudgy, chocolatey and seriously addictive.",
@@ -46,7 +47,7 @@ const cakes = [
     subject: "Order - Blackout Brownies"
   },
   {
-    image: "/assets/images/menu/cookies.png",
+    image: "/assets/images/order/reference/crookies.jpeg",
     alt: "Crookies",
     title: "Crookies",
     text: "Buttery croissant meets chewy cookie.",
@@ -88,7 +89,7 @@ export default function OrderPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="page-shell page-shell-design order-page order-sheet-page">
+      <main id="main-content" className="page-shell page-shell-design order-page order-sheet-page order-reference-page">
         <section className="sheet-hero order-sheet-hero reveal" aria-labelledby="order-title">
           <div>
             <h1 id="order-title">Cakes &amp; Bakes</h1>
@@ -96,13 +97,10 @@ export default function OrderPage() {
             <p>Made to order. Made with love.</p>
             <p className="hero-note">Whole cakes, brownies and more.<br />Please order 2-3 days in advance.</p>
           </div>
-          <img src="/assets/images/menu/basque-cheesecake.png" alt="Basque Cheesecake" />
+          <img src="/assets/images/order/reference/hero-basque.jpeg" alt="Basque Cheesecake" />
         </section>
 
-        <section className="sheet-heading reveal" aria-labelledby="cakes-title">
-          <h2 id="cakes-title">Our Cakes</h2>
-          <div className="ornament" aria-hidden="true">&#10045;</div>
-        </section>
+        <SheetHeading id="cakes-title" title="Our Cakes" />
 
         <section className="cake-row-list reveal" aria-label="Cakes and bakes catalogue">
           {cakes.map((cake) => (
@@ -130,13 +128,10 @@ export default function OrderPage() {
           </div>
         </section>
 
-        <section className="note-whatsapp-panel reveal">
-          <div className="flower-line" aria-hidden="true">&#10045;</div>
-          <p><strong>Please Note</strong><br />Orders require 2-3 days advance notice.<br />No cancellations on the day of collection.</p>
-          <p><i className="detail-icon ri-whatsapp-line" aria-hidden="true" /><strong>Have questions?</strong><br />WhatsApp us at +65 9123 4567</p>
-        </section>
+        <WhatsappNotePanel
+          primaryContent={<><strong>Please Note</strong><br />Orders require 2-3 days advance notice.<br />No cancellations on the day of collection.</>}
+        />
       </main>
-      <Footer />
     </>
   );
 }

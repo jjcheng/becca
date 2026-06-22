@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 
-import SiteChrome from "./components/SiteChrome";
+import Footer from "./components/footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
@@ -31,15 +31,16 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" />
         <link rel="stylesheet" href="/assets/css/styles.css?v=next-1" />
       </head>
       <body>
-        <a className="skip-link" href="#main-content">Skip to content</a>
-        {children}
-        <SiteChrome />
+        <div className="body-layout">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

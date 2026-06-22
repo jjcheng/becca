@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import AmenityGrid from "./components/AmenityGrid";
-import Divider from "./components/Divider";
-import Header from "./components/Header";
+import Divider from "./components/divider";
+import Header from "./components/header";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -54,8 +53,8 @@ export default function HomePage() {
             <Divider />
             <p className="home-reference-blurb">Flaky pastries, handcrafted matcha, cloud coffees and slow mornings.</p>
             <div className="button-row">
-              <Link className="btn btn-primary" href="/visit-us">Visit Our Cafe</Link>
-              <Link className="btn btn-light" href="/order">Order Cakes &amp; Bakes</Link>
+              <Link className="btn btn-primary" href="/visit-us" prefetch={false}>Visit Our Cafe</Link>
+              <Link className="btn btn-light" href="/order" prefetch={false}>Order Cakes &amp; Bakes</Link>
             </div>
           </div>
           <figure className="home-reference-visual" aria-hidden="true">
@@ -88,7 +87,7 @@ export default function HomePage() {
             <Divider />
             <h2 id="home-order-title">Made to order. Made with love.</h2>
             <p>Whole cakes, brownies and more - order 2-3 days in advance.</p>
-            <Link className="btn btn-primary" href="/order">Order Now</Link>
+            <Link className="btn btn-primary" href="/order" prefetch={false}>Order Now</Link>
           </div>
           <img src="/assets/images/home/order-basque.jpeg" alt="Basque Cheesecake from Becca's Cafe" />
         </section>
@@ -108,8 +107,6 @@ export default function HomePage() {
             ))}
           </div>
         </section>
-
-        <AmenityGrid />
       </main>
     </>
   );
