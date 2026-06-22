@@ -43,6 +43,8 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
           {children}
           <Footer />
         </div>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
