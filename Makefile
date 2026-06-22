@@ -1,4 +1,7 @@
-.PHONY: start
+.PHONY: start test
 
 start:
-	go run ./cmd/api
+	cd backend && go run ./cmd/api
+
+test:
+	cd backend && go test ./...

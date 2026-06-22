@@ -2,6 +2,8 @@ package controller
 
 import (
 	"net/http"
+	"os"
+	"path/filepath"
 
 	"github.com/gin-gonic/gin"
 
@@ -17,7 +19,7 @@ func RegisterControllers(router *gin.Engine, dependencies *service.Dependencies)
 }
 
 func registerCommonRoutes(router *gin.Engine) {
-	registerWWWRoutes(router)
+	registerWebRoutes(router)
 
 	router.GET("/health", func(context *gin.Context) {
 		responseObject := dto.NewSuccessResponse(map[string]any{
@@ -38,9 +40,9 @@ func registerCommonRoutes(router *gin.Engine) {
 	})
 }
 
-func registerWWWRoutes(router *gin.Engine) {
-	router.Static("/assets", "./www/assets")
-	router.Static("/licenses", "./www/licenses")
+func registerWebRoutes(router *gin.Engine) {
+	router.Static("/assets", webPath("assets"))
+	router.Static("/licenses", webPath("licenses"))
 
 	servePage := func(path string, file string) {
 		router.GET(path, func(context *gin.Context) {
@@ -48,14 +50,25 @@ func registerWWWRoutes(router *gin.Engine) {
 		})
 	}
 
-	servePage("/", "./www/index.html")
-	servePage("/index.html", "./www/index.html")
-	servePage("/cafe-menu", "./www/menu.html")
-	servePage("/menu.html", "./www/menu.html")
-	servePage("/cakes-bakes", "./www/menu.html")
-	servePage("/cakes-bakes.html", "./www/menu.html")
-	servePage("/order", "./www/order.html")
-	servePage("/order.html", "./www/order.html")
-	servePage("/visit-us", "./www/visit.html")
-	servePage("/visit.html", "./www/visit.html")
+	servePage("/", webPath("index.html"))
+	servePage("/index.html", webPath("index.html"))
+	servePage("/cafe-menu", webPath("menu.html"))
+	servePage("/menu.html", webPath("menu.html"))
+	servePage("/cakes-bakes", webPath("menu.html"))
+	servePage("/cakes-bakes.html", webPath("menu.html"))
+	servePage("/order", webPath("order.html"))
+	servePage("/order.html", webPath("order.html"))
+	servePage("/visit-us", webPath("visit.html"))
+	servePage("/visit.html", webPath("visit.html"))
+}
+
+func webPath(paths ...string) string {
+	for _, root := range []string{"../web", "web"} {
+		path := filepath.Join(append([]string{root}, paths...)...)
+		if _, err := os.Stat(path); err == nil {
+			return path
+		}
+	}
+
+	return filepath.Join(append([]string{"../web"}, paths...)...)
 }

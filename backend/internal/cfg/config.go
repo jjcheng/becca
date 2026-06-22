@@ -49,8 +49,7 @@ var onceDefault sync.Once
 
 func Default() *Config {
 	onceDefault.Do(func() {
-		_ = godotenv.Load()
-		_ = godotenv.Load("../../.env")
+		_ = godotenv.Load(".env", "../.env", "../../.env")
 
 		configInstance = &Config{
 			Database: DatabaseConfig{
