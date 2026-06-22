@@ -41,8 +41,8 @@ func registerCommonRoutes(router *gin.Engine) {
 }
 
 func registerWebRoutes(router *gin.Engine) {
-	router.Static("/assets", webPath("assets"))
-	router.Static("/licenses", webPath("licenses"))
+	router.Static("/assets", webPath("public", "assets"))
+	router.Static("/licenses", webPath("public", "licenses"))
 
 	servePage := func(path string, file string) {
 		router.GET(path, func(context *gin.Context) {

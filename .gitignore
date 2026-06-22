@@ -37,3 +37,8 @@ tmp/
 dist/
 build/
 bin/
+
+# Node and Next.js
+node_modules/
+.next/
+out/
