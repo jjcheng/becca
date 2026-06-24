@@ -3385,6 +3385,10 @@ footer.site-footer {
     gap: 8px;
   }
 
+  .home-review-grid {
+    grid-template-columns: 1fr;
+  }
+
   .home-signature-card {
     padding: 10px 8px 12px;
     border-radius: 14px;
@@ -3419,13 +3423,20 @@ footer.site-footer {
   }
 
   .home-review-card {
-    min-height: 150px;
-    padding: 12px 8px 14px;
+    min-height: 0;
+    padding: 30px 10px 14px;
     border-radius: 14px;
+    margin-bottom: 20px;
+  }
+
+  .home-review-quote {
+    font-size: 3.2rem;
+    line-height: 0.5;
   }
 
   .home-review-card blockquote {
     font-size: 0.9rem;
+    max-width: 100%;
   }
 
   .home-review-card p {
@@ -4002,10 +4013,9 @@ body:has(.menu-reference-page) .site-header {
 }
 
 @media (max-width: 560px) {
-  html,
   body:has(.menu-reference-page) {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .menu-reference-page {
@@ -4489,9 +4499,18 @@ body:has(.order-reference-page) .site-header {
 
 @media (max-width: 560px) {
   :is(.order-reference-page, .visit-reference-page) .order-note-panel {
-    grid-template-columns: 1fr;
+    grid-template-columns: 48px minmax(0, 1fr);
     gap: 12px;
     padding: 14px 12px;
+  }
+
+  :is(.order-reference-page, .visit-reference-page) .order-note-panel .order-note-flower {
+    grid-column: 1;
+  }
+
+  :is(.order-reference-page, .visit-reference-page) .order-note-panel .order-note-flower + p {
+    grid-column: 2;
+    align-self: center;
   }
 
   :is(.order-reference-page, .visit-reference-page) .order-note-flower .detail-icon {
@@ -4505,16 +4524,17 @@ body:has(.order-reference-page) .site-header {
   }
 
   :is(.order-reference-page, .visit-reference-page) .order-note-panel p + p {
-    grid-template-columns: 40px minmax(0, 1fr);
+    grid-column: 1 / -1;
+    grid-template-columns: 48px minmax(0, 1fr);
     column-gap: 12px;
     border-left: 0;
     padding-left: 0;
   }
 
   :is(.order-reference-page, .visit-reference-page) .order-note-panel p + p .detail-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 38px;
+    width: 48px;
+    height: 48px;
+    font-size: 44px;
   }
 
   :is(.order-reference-page, .visit-reference-page) .order-note-panel strong {
