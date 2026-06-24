@@ -4,10 +4,10 @@ import Divider from "../components/divider";
 import Header from "../components/header";
 
 export const metadata: Metadata = {
-  title: "Cafe Menu",
+  title: "Becca's Cafe | Menu",
   description: "Handcrafted drinks, thoughtful bites, and cakes to order from Becca's Cafe.",
   openGraph: {
-    title: "Becca's Cafe | Cafe Menu",
+    title: "Becca's Cafe | Menu",
     description: "Handcrafted drinks, thoughtful bites, and cakes to order from Becca's Cafe.",
     images: ["/assets/images/branding/logo.png"]
   }

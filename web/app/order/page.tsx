@@ -6,7 +6,7 @@ import SheetHeading from "../components/sheet-heading";
 import WhatsappNotePanel from "../components/whatsapp-note-panel";
 
 export const metadata: Metadata = {
-  title: "Order",
+  title: "Becca's Cafe | Order",
   description: "Order cakes and bakes from Becca's Cafe with 2 to 3 days advance notice.",
   openGraph: {
     title: "Becca's Cafe | Order",

@@ -70,14 +70,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Sacramento";
-  src: url("../fonts/sacramento-400.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
 :root {
   --cream: #f1ebe3;
   --cream-strong: #fbf6f0;
@@ -2786,7 +2778,9 @@ body::before {
 }
 
 .brand-script {
-  font-family: "Sacramento", cursive;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 600;
   font-size: 3.95rem;
   line-height: 0.78;
 }
@@ -4773,9 +4767,10 @@ body:has(.visit-reference-page) .site-header {
   padding-top: 18px;
   border-top: 1px solid rgba(214, 78, 121, 0.14);
   color: var(--design-pink-strong) !important;
-  font-family: "Sacramento", cursive;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 600 !important;
   font-size: 2.45rem !important;
-  font-weight: 400 !important;
   text-align: center;
 }
 

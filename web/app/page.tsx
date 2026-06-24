@@ -5,7 +5,7 @@ import Divider from "./components/divider";
 import Header from "./components/header";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Becca's Cafe | Home",
   description: "Curated coffee, matcha, and thoughtful bites at Becca's Cafe by the East Coast.",
   openGraph: {
     title: "Becca's Cafe | Home",

@@ -4,7 +4,7 @@ import Header from "../components/header";
 import WhatsappNotePanel from "../components/whatsapp-note-panel";
 
 export const metadata: Metadata = {
-  title: "Visit Us",
+  title: "Becca's Cafe | Visit Us",
   description: "Visit Becca's Cafe at 308 Telok Kurau Rd, Singapore 423858. Open daily from 8:00 AM to 6:00 PM.",
   openGraph: {
     title: "Becca's Cafe | Visit Us",
