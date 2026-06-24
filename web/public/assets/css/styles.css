@@ -2734,6 +2734,12 @@ body::before {
   padding: 14px 0 12px;
   border-bottom: 1px solid rgba(214, 78, 121, 0.14);
   background: rgba(255, 251, 248, 0.98);
+  transition: transform 220ms ease, background-color 220ms ease;
+  will-change: transform;
+}
+
+.site-header.is-hidden {
+  transform: translateY(calc(-100% - 6px));
 }
 
 .header-inner {
@@ -3562,6 +3568,23 @@ footer.site-footer {
 .note-whatsapp-panel p {
   margin: 0;
   font-size: 0.88rem;
+}
+
+@media (max-width: 560px) {
+  .note-whatsapp-panel {
+    padding: 16px 16px;
+    gap: 8px;
+  }
+
+  .note-whatsapp-panel .flower-line {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+  }
+
+  .note-whatsapp-panel p {
+    font-size: 0.80rem;
+    line-height: 1.4;
+  }
 }
 
 /* ─── 3a. Order hero note: muted at all widths ─── */
@@ -4411,7 +4434,7 @@ body:has(.order-reference-page) .site-header {
 
   .order-reference-page .order-sheet-hero,
   .order-reference-page .cake-order-row,
-  .order-reference-page .order-note-panel {
+  :is(.order-reference-page, .visit-reference-page) .order-note-panel {
     grid-template-columns: 1fr;
   }
 
@@ -4452,17 +4475,55 @@ body:has(.order-reference-page) .site-header {
     display: none;
   }
 
-  .order-reference-page .order-note-panel,
-  .visit-reference-page .order-note-panel {
-    gap: 16px;
+  :is(.order-reference-page, .visit-reference-page) .order-note-panel {
+    gap: 20px;
     padding: 20px;
   }
 
-  .order-reference-page .order-note-panel p + p,
-  .visit-reference-page .order-note-panel p + p {
+  :is(.order-reference-page, .visit-reference-page) .order-note-panel p + p {
     grid-template-columns: 48px minmax(0, 1fr);
     border-left: 0;
     padding-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  :is(.order-reference-page, .visit-reference-page) .order-note-panel {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 14px 12px;
+  }
+
+  :is(.order-reference-page, .visit-reference-page) .order-note-flower .detail-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 44px;
+  }
+
+  :is(.order-reference-page, .visit-reference-page) .order-note-panel p {
+    font-size: 0.85rem;
+  }
+
+  :is(.order-reference-page, .visit-reference-page) .order-note-panel p + p {
+    grid-template-columns: 40px minmax(0, 1fr);
+    column-gap: 12px;
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  :is(.order-reference-page, .visit-reference-page) .order-note-panel p + p .detail-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 38px;
+  }
+
+  :is(.order-reference-page, .visit-reference-page) .order-note-panel strong {
+    font-size: 0.80rem;
+    margin-bottom: 2px;
+  }
+
+  :is(.order-reference-page, .visit-reference-page) .order-note-panel p + p strong {
+    font-size: 0.80rem;
   }
 }
 

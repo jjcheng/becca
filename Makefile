@@ -1,4 +1,4 @@
-.PHONY: start-api test-api dev-web build-web start-web
+.PHONY: start-api test-api dev-web build-web start-web start-web-prod
 
 start-api:
 	cd backend && go run ./cmd/api
@@ -13,4 +13,7 @@ build-web:
 	cd web && npm run build
 
 start-web:
+	cd web && npm run dev
+
+start-web-prod:
 	cd web && npm run start

@@ -57,8 +57,15 @@ export default function Header() {
   const pathname = usePathname();
   const activeKey = activeKeyForPath(pathname);
   const [isOpen, setIsOpen] = useState(false);
+  const [isHeaderHidden, setIsHeaderHidden] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const lastScrollYRef = useRef(0);
+  const tickingRef = useRef(false);
+
+  const setHeaderHidden = (hidden: boolean) => {
+    setIsHeaderHidden((current) => (current === hidden ? current : hidden));
+  };
 
   useEffect(() => {
     setIsOpen(false);
@@ -95,8 +102,68 @@ export default function Header() {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    const isMobile = () => window.innerWidth <= 760;
+
+    lastScrollYRef.current = window.scrollY;
+
+    const updateHeader = () => {
+      const currentY = window.scrollY;
+      const delta = currentY - lastScrollYRef.current;
+
+      if (!isMobile()) {
+        setHeaderHidden(false);
+        lastScrollYRef.current = currentY;
+        tickingRef.current = false;
+        return;
+      }
+
+      if (currentY <= 8 || isOpen) {
+        setHeaderHidden(false);
+        lastScrollYRef.current = currentY;
+        tickingRef.current = false;
+        return;
+      }
+
+      if (Math.abs(delta) >= 4) {
+        if (delta > 0 && currentY > 80) {
+          setHeaderHidden(true);
+        } else if (delta < 0) {
+          setHeaderHidden(false);
+        }
+
+        lastScrollYRef.current = currentY;
+      }
+
+      tickingRef.current = false;
+    };
+
+    const onScroll = () => {
+      if (tickingRef.current) {
+        return;
+      }
+
+      tickingRef.current = true;
+      window.requestAnimationFrame(updateHeader);
+    };
+
+    const onResize = () => {
+      if (!isMobile()) {
+        setHeaderHidden(false);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+    };
+  }, [isOpen]);
+
   return (
-    <header className="site-header">
+    <header className={`site-header${isHeaderHidden ? " is-hidden" : ""}`}>
       <div className="header-inner">
         <button
           ref={toggleRef}

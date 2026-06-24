@@ -12,7 +12,7 @@ export default function Footer() {
         <article className="home-amenity-item">
           <i className="detail-icon ri-time-line" aria-hidden="true" />
           <div>
-            <strong>DAILY</strong>
+            <strong>OPEN DAILY</strong>
             <p>8:00AM - 6:00PM</p>
           </div>
         </article>
