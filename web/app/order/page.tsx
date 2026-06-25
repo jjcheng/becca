@@ -4,6 +4,7 @@ import { Fragment } from "react";
 import Header from "../components/header";
 import SheetHeading from "../components/sheet-heading";
 import WhatsappNotePanel from "../components/whatsapp-note-panel";
+import Divider from "../components/divider";
 
 export const metadata: Metadata = {
   title: "Becca's Cafe | Order",
@@ -92,8 +93,8 @@ export default function OrderPage() {
       <main id="main-content" className="page-shell page-shell-design order-page order-sheet-page order-reference-page">
         <section className="sheet-hero order-sheet-hero reveal" aria-labelledby="order-title">
           <div>
-            <h1 id="order-title">Cakes &amp; Bakes</h1>
-            <div className="ornament" aria-hidden="true">&#10045;</div>
+            <h1 id="order-title" className="page-top-title">Cakes &amp; Bakes</h1>
+            <Divider />
             <p>Made to order. Made with love.</p>
             <p className="hero-note">Whole cakes, brownies and more.<br />Please order 2-3 days in advance.</p>
           </div>

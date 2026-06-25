@@ -90,7 +90,7 @@ export default function HomePage() {
             <p>Whole cakes, brownies and more - order 2-3 days in advance.</p>
             <Link className="btn btn-primary" href="/order" prefetch={false}>Order Now</Link>
           </div>
-          <img src="/assets/images/home/order-basque.jpeg" alt="Basque Cheesecake from Becca's Cafe" />
+          <img className="home-order-cake-image" src="/assets/images/home/whole-basque-cheesecake.webp" alt="Whole Basque Cheesecake from Becca's Cafe" />
         </section>
 
         <section className="home-review-section reveal" aria-labelledby="favourites-title">
