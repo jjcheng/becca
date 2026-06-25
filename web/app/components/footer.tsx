@@ -35,7 +35,8 @@ export default function Footer() {
       </footer>
       <div className="footer-info" aria-label="Company information">
         <p><strong>AUSTERE PTE. LTD.</strong></p>
-        <p>308 TELOK KURAU ROAD, #01-07, VIBES @ EAST COAST, SINGAPORE 423858</p>
+        {/* <p>308 TELOK KURAU ROAD, #01-07, VIBES @ EAST COAST, SINGAPORE 423858</p> */}
+        <p>308 Telok Kurau Road #01-07</p>
       </div>
     </>
   );

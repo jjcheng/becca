@@ -16,23 +16,25 @@ export const metadata: Metadata = {
 
 const signatures = [
   {
-    image: "/assets/images/home/signature-matcha.jpeg?v=sig-photo-2",
+    image: "/assets/images/home/matcha-latte.webp",
     alt: "Matcha Latte from Becca's Cafe",
     title: "Matcha Latte",
-    text: "Ceremonial grade matcha whisked to order."
   },
   {
-    image: "/assets/images/home/signature-strawberry.jpeg?v=sig-photo-2",
+    image: "/assets/images/home/strawberry-cloud-matcha.webp",
     alt: "Strawberry Cloud Matcha from Becca's Cafe",
     title: "Strawberry Cloud Matcha",
-    text: "House strawberry cream cloud."
   },
   {
-    image: "/assets/images/home/signature-basque.jpeg?v=sig-photo-2",
+    image: "/assets/images/home/basque-cheesecake-slice.webp",
     alt: "Basque Cheesecake from Becca's Cafe",
     title: "Basque Cheesecake",
-    text: "Creamy centre, caramelised top."
-  }
+  },
+  {
+    image: "/assets/images/home/matcha-almond-croissant.webp",
+    alt: "Matcha almond croissant from Becca's Cafe",
+    title: "Matcha Almond Croissant",
+  },
 ];
 
 const reviews = [
@@ -51,7 +53,7 @@ export default function HomePage() {
             <p className="home-reference-eyebrow">WELCOME TO BECCA'S</p>
             <h1 id="home-title">A LITTLE <span>PINK</span> ESCAPE BY THE EAST COAST</h1>
             <Divider />
-            <p className="home-reference-blurb">Flaky pastries, handcrafted matcha, cloud coffees and slow mornings.</p>
+            <p className="home-reference-blurb">Curated coffee, Matcha & Indulgent Bites</p>
             <div className="button-row">
               <Link className="btn btn-primary" href="/visit-us" prefetch={false}>Visit Our Cafe</Link>
               <Link className="btn btn-light" href="/order" prefetch={false}>Order Cakes &amp; Bakes</Link>
@@ -59,7 +61,7 @@ export default function HomePage() {
           </div>
           <figure className="home-reference-visual" aria-hidden="true">
             <div className="home-reference-scene">
-              <img className="home-reference-hero-photo" src="/assets/images/home/hero-photo.jpeg" alt="" />
+              <img className="home-reference-hero-photo" src="/assets/images/home/hero-photo.webp" alt="" />
             </div>
           </figure>
         </section>
@@ -74,7 +76,6 @@ export default function HomePage() {
               <article className="home-signature-card" key={signature.title}>
                 <img src={signature.image} alt={signature.alt} />
                 <h3>{signature.title}</h3>
-                <p>{signature.text}</p>
                 <span className="home-signature-heart" aria-hidden="true">♡</span>
               </article>
             ))}
@@ -85,7 +86,7 @@ export default function HomePage() {
           <div className="home-order-copy">
             <p className="eyebrow">Order Cakes &amp; Bakes</p>
             <Divider />
-            <h2 id="home-order-title">Made to order. Made with love.</h2>
+            <h2 id="home-order-title">Freshly baked and Made to Order. 2-3 days in advance notice required.</h2>
             <p>Whole cakes, brownies and more - order 2-3 days in advance.</p>
             <Link className="btn btn-primary" href="/order" prefetch={false}>Order Now</Link>
           </div>
@@ -94,8 +95,12 @@ export default function HomePage() {
 
         <section className="home-review-section reveal" aria-labelledby="favourites-title">
           <div className="home-title-stack">
-            <h2 id="favourites-title">Customer Favourites</h2>
-            <div className="home-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <h2 id="favourites-title">Follow Our Journey</h2>
+            <div className="home-stars" aria-hidden="true">
+              <a href="https://www.instagram.com/beccas.cafe/" target="_blank">
+                @beccascafe.sg
+              </a>
+            </div>
           </div>
           <div className="home-review-grid">
             {reviews.map((review) => (

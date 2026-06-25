@@ -1356,7 +1356,7 @@ body::before {
 .page-shell-design > section,
 .page-shell-design > article,
 .page-shell-design > div {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .page-shell-design h1,
@@ -2819,15 +2819,42 @@ body::before {
 }
 
 .home-reference-hero {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 1.0fr) minmax(0, 1.0fr);
   align-items: stretch;
   min-height: 560px;
   overflow: hidden;
-  background: url("../images/home/hero-photo.jpeg?v=hero-bg-4") center / cover no-repeat;
+  background: url("../images/home/hero-photo.webp") center / cover no-repeat;
+}
+
+.home-reference-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 253, 249, 0.9) 5%,
+    rgba(255, 253, 249, 0.8) 15%,
+    rgba(255, 253, 249, 0.4) 25%,
+    rgba(255, 253, 249, 0.3) 35%,
+    rgba(255, 253, 249, 0.2) 45%,
+    rgba(255, 253, 249, 0.08) 65%,
+    rgba(255, 253, 249, 0) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  mask-image: linear-gradient(90deg, #000 0%, #000 78%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 78%, transparent 100%);
+  pointer-events: none;
 }
 
 .home-reference-copy {
+  position: relative;
+  z-index: 1;
   display: grid;
   align-content: center;
   gap: 16px;
@@ -2847,7 +2874,7 @@ body::before {
   margin: 0;
   color: var(--design-ink);
   font-family: "Cormorant Garamond", serif;
-  font-size: 3.5rem;
+  font-size: 3.0rem;
   line-height: 0.92;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -3028,13 +3055,12 @@ body::before {
   display: grid;
   justify-items: center;
   align-content: start;
-  gap: 8px;
-  min-height: 290px;
+  gap: 10px;
   padding: 0 0 8px;
   overflow: hidden;
   text-align: center;
   border-color: rgba(214, 78, 121, 0.13);
-  border-radius: 14px;
+  border-radius: 15px;
   background: rgba(255, 253, 249, 0.94);
   box-shadow: none;
 }
@@ -3076,7 +3102,7 @@ body::before {
 
 .home-order-sheet {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.8fr);
   gap: 16px;
   align-items: center;
   padding: 20px;
@@ -3101,7 +3127,7 @@ body::before {
   margin: 0;
   color: var(--design-ink);
   font-family: "Cormorant Garamond", serif;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   line-height: 0.98;
 }
 
@@ -3134,7 +3160,6 @@ body::before {
 
 .home-stars {
   color: var(--design-pink-strong);
-  letter-spacing: 0.18em;
   font-size: 1.1rem;
 }
 
@@ -3275,11 +3300,60 @@ footer.site-footer {
   }
 
   .home-reference-hero {
+    grid-template-columns: 1fr;
     min-height: 520px;
+    justify-items: center;
+  }
+
+  .home-reference-hero::before {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .home-reference-copy {
+    width: min(100%, 560px);
+    text-align: center;
+    justify-items: center;
+  }
+
+  .home-reference-visual {
+    display: none;
+  }
+
+  .home-reference-blurb {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-reference-hero .button-row {
+    justify-items: center;
   }
 
   .home-reference-hero h1 {
     font-size: 3.1rem;
+  }
+
+  .home-order-sheet {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .home-order-copy {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .home-order-copy .btn {
+    justify-self: center;
+  }
+
+  .home-order-sheet > img {
+    justify-self: center;
   }
 
   .home-order-copy h2 {
@@ -3326,9 +3400,10 @@ footer.site-footer {
   }
 
   .home-reference-hero {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     min-height: 480px;
     border-radius: 0;
+    justify-items: center;
   }
 
   .home-reference-copy {
@@ -3398,7 +3473,7 @@ footer.site-footer {
   }
 
   .home-order-sheet {
-    grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+    grid-template-columns: 1fr;
     gap: 12px;
     padding: 16px;
     border-radius: 14px;
