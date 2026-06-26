@@ -18,44 +18,62 @@ export const metadata: Metadata = {
 
 const cakes = [
   {
-    image: "/assets/images/order/reference/basque-cheesecake.jpeg",
+    image: "/assets/images/order/whole-basque-cheesecake.webp",
     alt: "Basque Cheesecake",
     title: "Basque Cheesecake",
     text: "Creamy, rich and perfectly caramelised on top.",
     icon: "ri-group-line",
-    serving: "Serves 6-8 pax",
-    price: "$58",
+    price: "$78",
     subject: "Order - Basque Cheesecake"
   },
   {
-    image: "/assets/images/order/reference/matcha-basque-cheesecake.jpeg",
+    image: "/assets/images/order/matcha-basque-cheesecake.webp",
     alt: "Matcha Basque Cheesecake",
     title: "Matcha Basque Cheesecake",
     text: "Creamy basque cheesecake with premium matcha.",
     icon: "ri-group-line",
-    serving: "Serves 6-8 pax",
-    price: "$62",
+    price: "$88",
     subject: "Order - Matcha Basque Cheesecake"
   },
   {
-    image: "/assets/images/order/reference/blackout-brownies.jpeg",
-    alt: "Blackout Brownies",
-    title: "Blackout Brownies",
+    image: "/assets/images/order/blackout-brownies.webp",
+    alt: "Blackout Brownies (normal – sea salt)",
+    title: "Blackout Brownies (normal – sea salt)",
     text: "Fudgy, chocolatey and seriously addictive.",
+    serving: "Box of 4 pieces",
     icon: "ri-box-1-line",
-    serving: "Box of 6 pieces",
-    price: "$28",
-    subject: "Order - Blackout Brownies"
+    price: "$24.8",
+    subject: "Order - Blackout Brownies (normal – sea salt)"
   },
   {
-    image: "/assets/images/order/reference/crookies.jpeg",
+    image: "/assets/images/order/blackout-brownies.webp",
+    alt: "Blackout Brownies (Nutella filling)",
+    title: "Blackout Brownies (Nutella filling)",
+    text: "Fudgy, chocolatey and seriously addictive.",
+    icon: "ri-box-1-line",
+    serving: "Box of 4 pieces",
+    price: "$28.8",
+    subject: "Order - Blackout Brownies (Nutella filling)"
+  },
+  {
+    image: "/assets/images/order/crookies.webp",
     alt: "Crookies",
     title: "Crookies",
     text: "Buttery croissant meets chewy cookie.",
     icon: "ri-box-1-line",
     serving: "Box of 4 pieces",
-    price: "$24",
+    price: "$19.2",
     subject: "Order - Crookies"
+  },
+  {
+    image: "/assets/images/order/biscoff-cookies.webp",
+    alt: "Biscoff Cookies",
+    title: "Biscoff Cookies",
+    text: "Buttery croissant meets chewy cookie.",
+    icon: "ri-box-1-line",
+    serving: "Box of 4 pieces",
+    price: "$24",
+    subject: "Order - Biscoff Cookies"
   }
 ];
 
@@ -98,7 +116,7 @@ export default function OrderPage() {
             <p>Made to order. Made with love.</p>
             <p className="hero-note">Whole cakes, brownies and more.<br />Please order 2-3 days in advance.</p>
           </div>
-          <img src="/assets/images/order/reference/hero-basque.jpeg" alt="Basque Cheesecake" />
+          <img src="/assets/images/order/hero-order.webp" alt="Order from Becca's Cafe" />
         </section>
 
         <SheetHeading id="cakes-title" title="Our Cakes" />

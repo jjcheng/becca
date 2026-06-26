@@ -17,13 +17,6 @@ export default function Footer() {
           </div>
         </article>
         <article className="home-amenity-item">
-          <i className="detail-icon ri-takeaway-line" aria-hidden="true" />
-          <div>
-            <strong>MADE FRESH</strong>
-            <p>In small batches</p>
-          </div>
-        </article>
-        <article className="home-amenity-item">
           <i className="detail-icon ri-instagram-line" aria-hidden="true" />
           <div>
             <strong>FOLLOW US</strong>
@@ -34,9 +27,8 @@ export default function Footer() {
         </article>
       </footer>
       <div className="footer-info" aria-label="Company information">
-        <p><strong>AUSTERE PTE. LTD.</strong></p>
-        {/* <p>308 TELOK KURAU ROAD, #01-07, VIBES @ EAST COAST, SINGAPORE 423858</p> */}
-        <p>308 Telok Kurau Road #01-07</p>
+        {/* <p><strong>AUSTERE PTE. LTD.</strong></p> */}
+        <p>308 TELOK KURAU ROAD, #01-07, VIBES @ EAST COAST, SINGAPORE 423858</p>
       </div>
     </>
   );

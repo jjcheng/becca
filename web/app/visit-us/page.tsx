@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Header from "../components/header";
 import Divider from "../components/divider";
 import WhatsappNotePanel from "../components/whatsapp-note-panel";
+import VisitMapFrame from "../components/visit-map-frame";
 
 export const metadata: Metadata = {
   title: "Becca's Cafe | Visit Us",
@@ -55,14 +56,7 @@ export default function VisitPage() {
             </a>
           </article>
 
-          <article className="visit-map-card" aria-label="Map to Becca's Cafe">
-            <iframe
-              title="Map to Becca's Cafe"
-              src="https://www.google.com/maps?q=1.3097286803212393,103.91190802596503&z=16&output=embed"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </article>
+          <VisitMapFrame />
         </section>
 
         <section className="feature-row reveal" aria-label="Visit features">
