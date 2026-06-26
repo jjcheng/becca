@@ -3247,6 +3247,7 @@ footer.site-footer {
   align-items: stretch;
   justify-content: normal;
   width: min(1140px, calc(100vw - 28px));
+  margin: 0 auto;
   padding: 18px 18px;
   border-radius: 18px;
   background: rgba(251, 226, 234, 0.5);
@@ -3552,6 +3553,7 @@ footer.site-footer {
   footer.site-footer {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 6px;
+    margin: 0 auto;
   }
 
   .home-amenity-item {
